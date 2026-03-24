@@ -1,0 +1,298 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>Free Investment Calculators & Tools | WealthAxis</title>
+  <meta name="description" content="Free investment tools for serious investors: compound interest calculator, ROI calculator, FIRE number, DCA simulator, and more. Run the numbers before you invest." />
+  <link rel="canonical" href="https://wealthaxis.netlify.app/tools/" />
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css" />
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">Wealth<span>Axis</span></a>
+      <ul class="nav-links">
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/tools/index.html" style="color:var(--gold)">Tools</a></li>
+        <li><a href="/#categories">Topics</a></li>
+        <li><a href="/#newsletter" class="nav-cta">Free Newsletter</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile">
+      <a href="/blog/index.html">Blog</a>
+      <a href="/tools/index.html">Tools</a>
+      <a href="/#newsletter">Newsletter</a>
+    </div>
+  </nav>
+
+  <div class="page-hero">
+    <div class="container">
+      <span class="section-tag">Free Tools</span>
+      <h1>Investment Calculators</h1>
+      <p>Run the numbers on any investment strategy before you commit your money.</p>
+    </div>
+  </div>
+
+  <!-- AD SLOT -->
+  <div class="ad-slot ad-slot--horizontal"><span class="ad-label">Advertisement</span></div>
+
+  <div class="container">
+    <div class="tools-grid" style="padding-top:60px;padding-bottom:60px">
+
+      <!-- COMPOUND INTEREST -->
+      <div class="tool-card" id="compound">
+        <div class="tool-card-header">
+          <span class="tool-card-icon">📈</span>
+          <div>
+            <h3>Compound Interest Calculator</h3>
+            <p>Visualize exponential growth over time</p>
+          </div>
+        </div>
+        <form class="tool-form" id="compound-form">
+          <div class="form-row">
+            <div class="form-group">
+              <label>Initial Investment ($)</label>
+              <input type="number" id="c-principal" value="10000" min="0" />
+            </div>
+            <div class="form-group">
+              <label>Monthly Contribution ($)</label>
+              <input type="number" id="c-monthly" value="500" min="0" />
+            </div>
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Annual Return (%)</label>
+              <input type="number" id="c-rate" value="8" min="0" max="100" step="0.1" />
+            </div>
+            <div class="form-group">
+              <label>Time Period (years)</label>
+              <input type="number" id="c-years" value="30" min="1" max="60" />
+            </div>
+          </div>
+          <button type="button" class="calc-btn" onclick="calcCompound()">Calculate →</button>
+          <div class="result-box" id="compound-result">
+            <div class="result-label">Final Balance</div>
+            <div class="result-value" id="c-result-value">—</div>
+            <div class="result-sub" id="c-result-sub"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- ROI CALCULATOR -->
+      <div class="tool-card" id="roi">
+        <div class="tool-card-header">
+          <span class="tool-card-icon">💰</span>
+          <div>
+            <h3>ROI Calculator</h3>
+            <p>Calculate return on any investment</p>
+          </div>
+        </div>
+        <form class="tool-form" id="roi-form">
+          <div class="form-group">
+            <label>Initial Investment ($)</label>
+            <input type="number" id="r-initial" value="5000" min="0" />
+          </div>
+          <div class="form-group">
+            <label>Final Value ($)</label>
+            <input type="number" id="r-final" value="8500" min="0" />
+          </div>
+          <div class="form-group">
+            <label>Time Held (years)</label>
+            <input type="number" id="r-years" value="3" min="0.1" step="0.5" />
+          </div>
+          <button type="button" class="calc-btn" onclick="calcROI()">Calculate →</button>
+          <div class="result-box" id="roi-result">
+            <div class="result-label">Total ROI</div>
+            <div class="result-value" id="r-result-value">—</div>
+            <div class="result-sub" id="r-result-sub"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- FIRE CALCULATOR -->
+      <div class="tool-card" id="fire">
+        <div class="tool-card-header">
+          <span class="tool-card-icon">🔥</span>
+          <div>
+            <h3>FIRE Number Calculator</h3>
+            <p>How much do you need to retire early?</p>
+          </div>
+        </div>
+        <form class="tool-form">
+          <div class="form-group">
+            <label>Annual Expenses in Retirement ($)</label>
+            <input type="number" id="f-expenses" value="60000" min="0" />
+          </div>
+          <div class="form-group">
+            <label>Safe Withdrawal Rate (%)</label>
+            <input type="number" id="f-swr" value="4" min="1" max="10" step="0.1" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Current Savings ($)</label>
+              <input type="number" id="f-savings" value="80000" min="0" />
+            </div>
+            <div class="form-group">
+              <label>Annual Savings ($)</label>
+              <input type="number" id="f-annual" value="30000" min="0" />
+            </div>
+          </div>
+          <button type="button" class="calc-btn" onclick="calcFIRE()">Calculate →</button>
+          <div class="result-box" id="fire-result">
+            <div class="result-label">Your FIRE Number</div>
+            <div class="result-value" id="f-result-value">—</div>
+            <div class="result-sub" id="f-result-sub"></div>
+          </div>
+        </form>
+      </div>
+
+      <!-- DCA SIMULATOR -->
+      <div class="tool-card" id="dca">
+        <div class="tool-card-header">
+          <span class="tool-card-icon">📊</span>
+          <div>
+            <h3>DCA vs Lump Sum Simulator</h3>
+            <p>Dollar-cost average vs investing all at once</p>
+          </div>
+        </div>
+        <form class="tool-form">
+          <div class="form-group">
+            <label>Total Amount to Invest ($)</label>
+            <input type="number" id="d-total" value="12000" min="0" />
+          </div>
+          <div class="form-row">
+            <div class="form-group">
+              <label>Annual Return (%)</label>
+              <input type="number" id="d-rate" value="8" min="0" max="100" step="0.1" />
+            </div>
+            <div class="form-group">
+              <label>DCA Period (months)</label>
+              <input type="number" id="d-months" value="12" min="1" max="60" />
+            </div>
+          </div>
+          <div class="form-group">
+            <label>Investment Horizon (years)</label>
+            <input type="number" id="d-years" value="20" min="1" max="50" />
+          </div>
+          <button type="button" class="calc-btn" onclick="calcDCA()">Compare →</button>
+          <div class="result-box" id="dca-result">
+            <div class="result-label">Lump Sum Final Value</div>
+            <div class="result-value" id="d-result-lump">—</div>
+            <div class="result-sub" id="d-result-sub"></div>
+          </div>
+        </form>
+      </div>
+
+    </div>
+
+    <!-- AD SLOT BOTTOM -->
+    <div class="ad-slot ad-slot--horizontal" style="border-radius:12px;border:1px solid var(--border);margin-bottom:60px"><span class="ad-label">Advertisement</span></div>
+  </div>
+
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 WealthAxis. For informational purposes only. Not financial advice.</p>
+      </div>
+    </div>
+  </footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function fmt(n) {
+      return '$' + Math.round(n).toLocaleString('en-US');
+    }
+    function pct(n) {
+      return n.toFixed(2) + '%';
+    }
+
+    function calcCompound() {
+      const P = parseFloat(document.getElementById('c-principal').value) || 0;
+      const M = parseFloat(document.getElementById('c-monthly').value) || 0;
+      const r = (parseFloat(document.getElementById('c-rate').value) || 0) / 100 / 12;
+      const n = (parseFloat(document.getElementById('c-years').value) || 0) * 12;
+      const totalContrib = P + M * n;
+
+      let balance = P;
+      for (let i = 0; i < n; i++) {
+        balance = balance * (1 + r) + M;
+      }
+
+      const growth = balance - totalContrib;
+      const el = document.getElementById('compound-result');
+      document.getElementById('c-result-value').textContent = fmt(balance);
+      document.getElementById('c-result-sub').textContent =
+        `Contributions: ${fmt(totalContrib)} · Growth: ${fmt(growth)} (${pct(growth / totalContrib * 100)})`;
+      el.classList.add('visible');
+    }
+
+    function calcROI() {
+      const initial = parseFloat(document.getElementById('r-initial').value) || 1;
+      const final = parseFloat(document.getElementById('r-final').value) || 0;
+      const years = parseFloat(document.getElementById('r-years').value) || 1;
+      const totalROI = (final - initial) / initial * 100;
+      const annualROI = (Math.pow(final / initial, 1 / years) - 1) * 100;
+      const profit = final - initial;
+
+      document.getElementById('r-result-value').textContent = pct(totalROI);
+      document.getElementById('r-result-sub').textContent =
+        `Profit: ${fmt(profit)} · Annualized ROI: ${pct(annualROI)} · CAGR`;
+      document.getElementById('roi-result').classList.add('visible');
+    }
+
+    function calcFIRE() {
+      const expenses = parseFloat(document.getElementById('f-expenses').value) || 0;
+      const swr = (parseFloat(document.getElementById('f-swr').value) || 4) / 100;
+      const savings = parseFloat(document.getElementById('f-savings').value) || 0;
+      const annual = parseFloat(document.getElementById('f-annual').value) || 0;
+
+      const fireNumber = expenses / swr;
+      const remaining = Math.max(0, fireNumber - savings);
+      const yearsToFIRE = annual > 0 ? Math.ceil(remaining / annual) : Infinity;
+
+      document.getElementById('f-result-value').textContent = fmt(fireNumber);
+      document.getElementById('f-result-sub').textContent =
+        `Still needed: ${fmt(remaining)} · Est. years to FIRE: ${yearsToFIRE === Infinity ? '∞' : yearsToFIRE + ' yrs'} (simplified)`;
+      document.getElementById('fire-result').classList.add('visible');
+    }
+
+    function calcDCA() {
+      const total = parseFloat(document.getElementById('d-total').value) || 0;
+      const rate = (parseFloat(document.getElementById('d-rate').value) || 0) / 100;
+      const months = parseFloat(document.getElementById('d-months').value) || 12;
+      const years = parseFloat(document.getElementById('d-years').value) || 20;
+      const n = years;
+
+      // Lump sum: invest all now
+      const lumpSum = total * Math.pow(1 + rate, n);
+      // DCA: invest total/months each month for 'months' months, then hold
+      const monthly = total / months;
+      const mr = rate / 12;
+      let dcaBalance = 0;
+      const totalMonths = n * 12;
+      for (let i = 0; i < totalMonths; i++) {
+        if (i < months) dcaBalance += monthly;
+        dcaBalance *= (1 + mr);
+      }
+
+      const diff = lumpSum - dcaBalance;
+      document.getElementById('d-result-lump').textContent = fmt(lumpSum);
+      document.getElementById('d-result-sub').textContent =
+        `DCA result: ${fmt(dcaBalance)} · Lump sum advantage: ${fmt(Math.abs(diff))} ${diff > 0 ? '(lump sum wins)' : '(DCA wins)'}`;
+      document.getElementById('dca-result').classList.add('visible');
+    }
+
+    // Auto-scroll to anchor
+    if (window.location.hash) {
+      setTimeout(() => {
+        const el = document.querySelector(window.location.hash);
+        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
+      }, 300);
+    }
+  </script>
+</body>
+</html>
