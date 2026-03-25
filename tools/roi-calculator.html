@@ -1,0 +1,110 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>ROI Calculator — Calculate Return on Investment Instantly | WealthAxis</title>
+  <meta name="description" content="Free ROI calculator. Calculate your return on investment, annualized CAGR, total profit, and compare multiple investments side by side. Works for stocks, real estate, and any asset."/>
+  <link rel="canonical" href="https://wealthaxis.netlify.app/tools/roi-calculator.html"/>
+  <meta name="google-adsense-account" content="ca-pub-4613426749830025">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4613426749830025" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"ROI Calculator","description":"Calculate return on investment, CAGR and profit for any investment","url":"https://wealthaxis.netlify.app/tools/roi-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <style>
+    .tool-page{padding:100px 0 60px}.tool-page-inner{max-width:900px;margin:0 auto;padding:0 24px}.tool-hero{text-align:center;margin-bottom:48px}.tool-hero .section-tag{display:block;margin-bottom:12px}.tool-hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-1px;margin-bottom:16px}.tool-hero p{color:var(--text-muted);font-size:1.05rem;max-width:600px;margin:0 auto}.tool-main-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:40px;margin-bottom:32px}.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px}.tg-group{display:flex;flex-direction:column;gap:6px}.tg-group label{font-size:.75rem;color:var(--text-muted);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em}.tg-group input,.tg-group select{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 16px;color:var(--text);font-family:var(--font-body);font-size:1rem;outline:none;transition:border-color .2s;width:100%}.tg-group input:focus{border-color:var(--gold)}.tool-calc-btn{width:100%;background:var(--gold);color:var(--bg);border:none;border-radius:10px;padding:15px;font-weight:700;font-size:1rem;cursor:pointer;font-family:var(--font-body);transition:opacity .2s;margin-top:8px}.tool-calc-btn:hover{opacity:.88}.results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}.result-stat{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center}.result-stat .label{font-size:.72rem;color:var(--text-muted);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}.result-stat .value{font-family:var(--font-display);font-size:1.6rem;font-weight:700}.result-stat .value.gold{color:var(--gold)}.result-stat .value.green{color:var(--green)}.result-stat .value.red{color:var(--red)}.result-stat .sublabel{font-size:.75rem;color:var(--text-dim);font-family:var(--font-mono);margin-top:4px}.compare-section{margin-top:28px;background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:24px}.compare-section h3{font-size:.85rem;font-family:var(--font-mono);text-transform:uppercase;color:var(--text-muted);margin-bottom:16px}.benchmark-row{display:flex;justify-content:space-between;align-items:center;padding:10px 0;border-bottom:1px solid var(--border)}.benchmark-row:last-child{border-bottom:none}.bench-name{font-size:.9rem;color:var(--text-muted)}.bench-val{font-family:var(--font-mono);font-size:.9rem;font-weight:600}.tool-faq{margin-top:48px}.tool-faq h2{font-family:var(--font-display);font-size:1.6rem;font-weight:700;margin-bottom:24px}.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-bottom:12px}.faq-item h3{font-size:1rem;font-weight:600;margin-bottom:10px}.faq-item p{font-size:.9rem;color:var(--text-muted);line-height:1.7;margin:0}.related-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}.rel-tool{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;transition:border-color .2s,transform .2s;display:block}.rel-tool:hover{border-color:var(--gold);transform:translateY(-2px)}.rel-tool .rt-icon{font-size:1.5rem;margin-bottom:8px}.rel-tool strong{display:block;font-size:.9rem;font-weight:600;margin-bottom:4px}.rel-tool span{font-size:.78rem;color:var(--text-muted)}@media(max-width:700px){.tool-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr 1fr}.related-tools{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav"><div class="nav-inner"><a href="/" class="logo">Wealth<span>Axis</span></a><ul class="nav-links"><li><a href="/blog/index.html">Blog</a></li><li><a href="/tools/index.html" style="color:var(--gold)">Tools</a></li><li><a href="/#newsletter" class="nav-cta">Free Newsletter</a></li></ul><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div><div class="nav-mobile" id="nav-mobile"><a href="/blog/index.html">Blog</a><a href="/tools/index.html">Tools</a></div></nav>
+  <div class="ad-slot ad-slot--horizontal" style="margin-top:64px"><span class="ad-label">Advertisement</span></div>
+  <div class="tool-page">
+    <div class="tool-page-inner">
+      <div class="tool-hero">
+        <span class="section-tag">Free Calculator</span>
+        <h1>ROI Calculator</h1>
+        <p>Calculate your exact return on investment, annualized CAGR, and total profit for stocks, real estate, business, or any investment.</p>
+      </div>
+      <div class="tool-main-card">
+        <div class="tool-grid">
+          <div class="tg-group"><label>Initial Investment ($)</label><input type="number" id="r-initial" value="10000" min="0"/></div>
+          <div class="tg-group"><label>Final Value ($)</label><input type="number" id="r-final" value="18500" min="0"/></div>
+          <div class="tg-group"><label>Additional Income ($) — optional</label><input type="number" id="r-income" value="0" min="0" placeholder="Dividends, rent, etc."/></div>
+          <div class="tg-group"><label>Investment Fees ($) — optional</label><input type="number" id="r-fees" value="0" min="0" placeholder="Commissions, management fees"/></div>
+          <div class="tg-group"><label>Time Held (Years)</label><input type="number" id="r-years" value="5" min="0.1" step="0.5"/></div>
+          <div class="tg-group"><label>Tax Rate on Gains (%) — optional</label><input type="number" id="r-tax" value="15" min="0" max="50" step="0.5"/></div>
+        </div>
+        <button class="tool-calc-btn" onclick="calcROI()">Calculate ROI →</button>
+        <div id="results" style="display:none">
+          <div class="results-grid">
+            <div class="result-stat"><div class="label">Total ROI</div><div class="value gold" id="r-roi">—</div><div class="sublabel">On initial investment</div></div>
+            <div class="result-stat"><div class="label">Annualized Return (CAGR)</div><div class="value green" id="r-cagr">—</div><div class="sublabel">Per year, compounded</div></div>
+            <div class="result-stat"><div class="label">Net Profit</div><div class="value" id="r-profit">—</div><div class="sublabel">After fees</div></div>
+          </div>
+          <div class="results-grid" style="margin-top:12px">
+            <div class="result-stat"><div class="label">After-Tax Profit</div><div class="value" id="r-after-tax">—</div><div class="sublabel" id="r-tax-paid">—</div></div>
+            <div class="result-stat"><div class="label">Total Income Received</div><div class="value" id="r-total-income">—</div><div class="sublabel">Dividends / rent</div></div>
+            <div class="result-stat"><div class="label">After-Tax CAGR</div><div class="value" id="r-at-cagr">—</div><div class="sublabel">Net annualized return</div></div>
+          </div>
+          <div class="compare-section">
+            <h3>How Your Return Compares</h3>
+            <div class="benchmark-row"><span class="bench-name">Your Investment (CAGR)</span><span class="bench-val" id="bench-yours" style="color:var(--gold)">—</span></div>
+            <div class="benchmark-row"><span class="bench-name">S&P 500 Historical Average</span><span class="bench-val" style="color:var(--green)">~10.0% / yr</span></div>
+            <div class="benchmark-row"><span class="bench-name">Bonds (US Agg. Historical)</span><span class="bench-val">~4.5% / yr</span></div>
+            <div class="benchmark-row"><span class="bench-name">High-Yield Savings (2026)</span><span class="bench-val">~4.8% / yr</span></div>
+            <div class="benchmark-row"><span class="bench-name">US Inflation (Historical Avg.)</span><span class="bench-val" style="color:var(--red)">~3.0% / yr</span></div>
+          </div>
+        </div>
+      </div>
+      <div class="ad-slot ad-slot--horizontal" style="border-radius:12px;border:1px solid var(--border);margin-bottom:40px"><span class="ad-label">Advertisement</span></div>
+      <div class="tool-faq">
+        <h2>Understanding ROI and CAGR</h2>
+        <div class="faq-item"><h3>What is ROI?</h3><p>Return on Investment (ROI) is the percentage gain or loss on an investment relative to its cost. Formula: ROI = (Final Value − Initial Investment + Income − Fees) ÷ Initial Investment × 100. A 50% ROI means you earned 50 cents for every dollar invested. ROI doesn't account for time — a 50% return in 1 year is dramatically better than 50% over 10 years.</p></div>
+        <div class="faq-item"><h3>What is CAGR and why does it matter?</h3><p>Compound Annual Growth Rate (CAGR) is the annualized rate of return that accounts for compounding over the holding period. It's the most useful metric for comparing investments held over different timeframes. Formula: CAGR = (Final Value / Initial Value)^(1/years) − 1. A 10% CAGR over 10 years produces the same result as 10% compounded annually — regardless of the actual year-by-year fluctuations.</p></div>
+        <div class="faq-item"><h3>What's a good ROI for an investment?</h3><p>Context is everything. The S&P 500 has historically returned ~10% annually. A "good" ROI depends on the asset class, risk level, and time period. For stocks, anything consistently above 8-10% annually is exceptional. For real estate, 6-12% annualized total returns (including rental income and appreciation) is typical for well-selected properties. For bonds, 4-6% is reasonable. Always compare ROI against the risk-free rate (Treasury yields) and inflation.</p></div>
+        <div class="faq-item"><h3>Why does the after-tax return matter?</h3><p>Pre-tax returns are misleading for comparing investments held in different account types. A 10% return in a taxable account for a 37% bracket investor nets only 6.3% after federal taxes. The same investment in a Roth IRA keeps the full 10%. Always evaluate investments on an after-tax basis to compare accurately across account types.</p></div>
+      </div>
+      <div style="margin-top:48px"><h2 style="font-family:var(--font-display);font-size:1.4rem;font-weight:700;margin-bottom:20px">Related Calculators</h2>
+        <div class="related-tools">
+          <a href="compound-interest-calculator.html" class="rel-tool"><div class="rt-icon">📈</div><strong>Compound Interest</strong><span>Long-term growth projections</span></a>
+          <a href="fire-number-calculator.html" class="rel-tool"><div class="rt-icon">🔥</div><strong>FIRE Number</strong><span>Early retirement target</span></a>
+          <a href="investment-fee-calculator.html" class="rel-tool"><div class="rt-icon">💸</div><strong>Fee Impact Calculator</strong><span>True cost of high fees</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ad-slot ad-slot--horizontal"><span class="ad-label">Advertisement</span></div>
+  <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 WealthAxis. For informational purposes only. Not financial advice. | <a href="../disclaimer.html" style="color:var(--gold)">Disclaimer</a></p></div></div></footer>
+  <script src="../js/main.js"></script>
+  <script>
+    function fmt(n){return'$'+Math.round(n).toLocaleString('en-US')}
+    function pct(n){return(n>=0?'+':'')+n.toFixed(2)+'%'}
+    function calcROI(){
+      const init=parseFloat(document.getElementById('r-initial').value)||1;
+      const fin=parseFloat(document.getElementById('r-final').value)||0;
+      const inc=parseFloat(document.getElementById('r-income').value)||0;
+      const fees=parseFloat(document.getElementById('r-fees').value)||0;
+      const years=parseFloat(document.getElementById('r-years').value)||1;
+      const taxRate=(parseFloat(document.getElementById('r-tax').value)||0)/100;
+      const netProfit=fin-init+inc-fees;
+      const roi=netProfit/init*100;
+      const cagr=(Math.pow((fin+inc-fees)/init,1/years)-1)*100;
+      const taxOwed=netProfit>0?netProfit*taxRate:0;
+      const afterTaxProfit=netProfit-taxOwed;
+      const atCagr=(Math.pow((init+afterTaxProfit)/init,1/years)-1)*100;
+      document.getElementById('r-roi').textContent=pct(roi);
+      document.getElementById('r-roi').className='value '+(roi>=0?'gold':'red');
+      document.getElementById('r-cagr').textContent=pct(cagr);
+      document.getElementById('r-cagr').className='value '+(cagr>=0?'green':'red');
+      document.getElementById('r-profit').textContent=fmt(netProfit);
+      document.getElementById('r-after-tax').textContent=fmt(afterTaxProfit);
+      document.getElementById('r-tax-paid').textContent='Tax paid: '+fmt(taxOwed);
+      document.getElementById('r-total-income').textContent=fmt(inc);
+      document.getElementById('r-at-cagr').textContent=pct(atCagr);
+      document.getElementById('bench-yours').textContent=pct(cagr)+' / yr';
+      document.getElementById('results').style.display='block';
+    }
+    calcROI();
+  </script>
+</body>
+</html>

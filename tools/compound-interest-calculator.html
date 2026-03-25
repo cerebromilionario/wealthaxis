@@ -1,0 +1,217 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Compound Interest Calculator — See How Your Money Grows | WealthAxis</title>
+  <meta name="description" content="Free compound interest calculator. Enter your initial investment, monthly contributions, interest rate and time to see exactly how much your money will grow with the power of compounding."/>
+  <link rel="canonical" href="https://wealthaxis.netlify.app/tools/compound-interest-calculator.html"/>
+  <meta name="google-adsense-account" content="ca-pub-4613426749830025">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4613426749830025" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script type="application/ld+json">{"@context":"https://schema.org","@type":"WebApplication","name":"Compound Interest Calculator","description":"Calculate compound interest growth over time with monthly contributions","url":"https://wealthaxis.netlify.app/tools/compound-interest-calculator.html","applicationCategory":"FinanceApplication","operatingSystem":"Any","offers":{"@type":"Offer","price":"0","priceCurrency":"USD"}}</script>
+  <style>
+    .tool-page{padding:100px 0 60px}
+    .tool-page-inner{max-width:900px;margin:0 auto;padding:0 24px}
+    .tool-hero{text-align:center;margin-bottom:48px}
+    .tool-hero .section-tag{display:block;margin-bottom:12px}
+    .tool-hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-1px;margin-bottom:16px}
+    .tool-hero p{color:var(--text-muted);font-size:1.05rem;max-width:600px;margin:0 auto}
+    .tool-main-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:40px;margin-bottom:32px}
+    .tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px}
+    .tg-group{display:flex;flex-direction:column;gap:6px}
+    .tg-group label{font-size:.75rem;color:var(--text-muted);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em}
+    .tg-group input,.tg-group select{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 16px;color:var(--text);font-family:var(--font-body);font-size:1rem;outline:none;transition:border-color .2s;width:100%}
+    .tg-group input:focus,.tg-group select:focus{border-color:var(--gold)}
+    .tool-calc-btn{width:100%;background:var(--gold);color:var(--bg);border:none;border-radius:10px;padding:15px;font-weight:700;font-size:1rem;cursor:pointer;font-family:var(--font-body);transition:opacity .2s;margin-top:8px}
+    .tool-calc-btn:hover{opacity:.88}
+    .results-grid{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:28px}
+    .result-stat{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:20px;text-align:center}
+    .result-stat .label{font-size:.72rem;color:var(--text-muted);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.08em;margin-bottom:8px}
+    .result-stat .value{font-family:var(--font-display);font-size:1.6rem;font-weight:700}
+    .result-stat .value.gold{color:var(--gold)}
+    .result-stat .value.green{color:var(--green)}
+    .result-stat .sublabel{font-size:.75rem;color:var(--text-dim);font-family:var(--font-mono);margin-top:4px}
+    .chart-wrap{background:var(--bg);border:1px solid var(--border);border-radius:12px;padding:24px;margin-top:20px}
+    .chart-wrap h3{font-size:.85rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--text-muted);margin-bottom:16px}
+    .bar-chart{display:flex;align-items:flex-end;gap:6px;height:140px}
+    .bar-wrap{flex:1;display:flex;flex-direction:column;align-items:center;gap:4px;height:100%}
+    .bar-stack{flex:1;display:flex;flex-direction:column;justify-content:flex-end;width:100%}
+    .bar-contrib{background:var(--border);border-radius:3px 3px 0 0;transition:height .6s ease}
+    .bar-growth{background:var(--gold);border-radius:3px 3px 0 0;transition:height .6s ease;opacity:.85}
+    .bar-label{font-size:.65rem;color:var(--text-dim);font-family:var(--font-mono)}
+    .legend{display:flex;gap:20px;margin-top:12px}
+    .legend-item{display:flex;align-items:center;gap:6px;font-size:.78rem;color:var(--text-muted)}
+    .legend-dot{width:10px;height:10px;border-radius:2px}
+    .tool-faq{margin-top:48px}
+    .tool-faq h2{font-family:var(--font-display);font-size:1.6rem;font-weight:700;margin-bottom:24px}
+    .faq-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-bottom:12px}
+    .faq-item h3{font-size:1rem;font-weight:600;margin-bottom:10px;color:var(--text)}
+    .faq-item p{font-size:.9rem;color:var(--text-muted);line-height:1.7;margin:0}
+    .related-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}
+    .rel-tool{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;transition:border-color .2s,transform .2s;display:block}
+    .rel-tool:hover{border-color:var(--gold);transform:translateY(-2px)}
+    .rel-tool .rt-icon{font-size:1.5rem;margin-bottom:8px}
+    .rel-tool strong{display:block;font-size:.9rem;font-weight:600;margin-bottom:4px}
+    .rel-tool span{font-size:.78rem;color:var(--text-muted)}
+    @media(max-width:700px){.tool-grid{grid-template-columns:1fr}.results-grid{grid-template-columns:1fr 1fr}.related-tools{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">Wealth<span>Axis</span></a>
+      <ul class="nav-links">
+        <li><a href="/blog/index.html">Blog</a></li>
+        <li><a href="/tools/index.html" style="color:var(--gold)">Tools</a></li>
+        <li><a href="/#newsletter" class="nav-cta">Free Newsletter</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile"><a href="/blog/index.html">Blog</a><a href="/tools/index.html">Tools</a></div>
+  </nav>
+
+  <div class="ad-slot ad-slot--horizontal" style="margin-top:64px"><span class="ad-label">Advertisement</span></div>
+
+  <div class="tool-page">
+    <div class="tool-page-inner">
+      <div class="tool-hero">
+        <span class="section-tag">Free Calculator</span>
+        <h1>Compound Interest Calculator</h1>
+        <p>See exactly how your money grows over time. Enter your numbers and watch compound interest work its magic — the most powerful force in investing.</p>
+      </div>
+
+      <div class="tool-main-card">
+        <div class="tool-grid">
+          <div class="tg-group"><label>Initial Investment ($)</label><input type="number" id="c-principal" value="10000" min="0"/></div>
+          <div class="tg-group"><label>Monthly Contribution ($)</label><input type="number" id="c-monthly" value="500" min="0"/></div>
+          <div class="tg-group"><label>Annual Interest Rate (%)</label><input type="number" id="c-rate" value="8" min="0" max="100" step="0.1"/></div>
+          <div class="tg-group"><label>Time Period (Years)</label><input type="number" id="c-years" value="30" min="1" max="60"/></div>
+          <div class="tg-group"><label>Compounding Frequency</label>
+            <select id="c-freq">
+              <option value="12" selected>Monthly</option>
+              <option value="4">Quarterly</option>
+              <option value="2">Semi-Annually</option>
+              <option value="1">Annually</option>
+              <option value="365">Daily</option>
+            </select>
+          </div>
+          <div class="tg-group"><label>Inflation Rate (%) — optional</label><input type="number" id="c-inflation" value="3" min="0" max="20" step="0.1"/></div>
+        </div>
+        <button class="tool-calc-btn" onclick="calcCompound()">Calculate Growth →</button>
+
+        <div id="results" style="display:none">
+          <div class="results-grid">
+            <div class="result-stat"><div class="label">Final Balance</div><div class="value gold" id="r-final">—</div><div class="sublabel">Nominal</div></div>
+            <div class="result-stat"><div class="label">Total Contributions</div><div class="value" id="r-contrib">—</div><div class="sublabel">Your money invested</div></div>
+            <div class="result-stat"><div class="label">Total Interest Earned</div><div class="value green" id="r-interest">—</div><div class="sublabel" id="r-interest-pct">—</div></div>
+          </div>
+          <div class="results-grid" style="margin-top:12px">
+            <div class="result-stat"><div class="label">Real Value (Inflation-adj.)</div><div class="value" id="r-real">—</div><div class="sublabel">Purchasing power today</div></div>
+            <div class="result-stat"><div class="label">Effective Annual Rate</div><div class="value" id="r-ear">—</div><div class="sublabel">After compounding</div></div>
+            <div class="result-stat"><div class="label">Rule of 72 Doubling</div><div class="value" id="r-double">—</div><div class="sublabel">Approx. years to double</div></div>
+          </div>
+          <div class="chart-wrap">
+            <h3>Growth Over Time</h3>
+            <div class="bar-chart" id="bar-chart"></div>
+            <div class="legend"><div class="legend-item"><div class="legend-dot" style="background:var(--border)"></div>Contributions</div><div class="legend-item"><div class="legend-dot" style="background:var(--gold)"></div>Interest Growth</div></div>
+          </div>
+        </div>
+      </div>
+
+      <div class="ad-slot ad-slot--horizontal" style="border-radius:12px;border:1px solid var(--border);margin-bottom:40px"><span class="ad-label">Advertisement</span></div>
+
+      <div class="tool-faq">
+        <h2>How Does Compound Interest Work?</h2>
+        <div class="faq-item"><h3>What is compound interest?</h3><p>Compound interest is interest calculated on both your initial principal and the accumulated interest from previous periods. Unlike simple interest (which only earns on the principal), compound interest earns interest on interest — creating exponential growth over time. Einstein is often (apocryphally) credited with calling it the "eighth wonder of the world."</p></div>
+        <div class="faq-item"><h3>How does compounding frequency affect returns?</h3><p>More frequent compounding means slightly higher effective returns. Daily compounding yields marginally more than annual compounding at the same stated rate. The difference becomes significant with higher interest rates and longer time horizons. For most investment accounts (index funds, ETFs), compounding is effectively continuous as prices adjust daily.</p></div>
+        <div class="faq-item"><h3>What is the Rule of 72?</h3><p>Divide 72 by your annual interest rate to estimate years to double your money. At 8% return, 72 ÷ 8 = 9 years to double. At 6%, it takes 12 years. This mental shortcut is accurate within 1-2% for typical investment return ranges.</p></div>
+        <div class="faq-item"><h3>What average return should I use?</h3><p>The US stock market (S&P 500) has historically returned approximately 10% nominal and 7% real (inflation-adjusted) annually over long periods. For a conservative estimate, use 6-7%. For moderate projections use 8%, and for historical averages use 10%. Never assume returns are guaranteed — actual results vary significantly year to year.</p></div>
+        <div class="faq-item"><h3>Why does starting early matter so much?</h3><p>The later years of a long compound interest journey contribute the most growth in absolute dollar terms. An investor who starts at 25 vs. 35 doesn't just earn 10 more years of returns — those early 10 years compound for the entire remaining period and can account for more than half the final portfolio value. Time is the single most valuable input in this calculator.</p></div>
+      </div>
+
+      <div style="margin-top:48px"><h2 style="font-family:var(--font-display);font-size:1.4rem;font-weight:700;margin-bottom:20px">Related Calculators</h2>
+        <div class="related-tools">
+          <a href="roi-calculator.html" class="rel-tool"><div class="rt-icon">💰</div><strong>ROI Calculator</strong><span>Measure any investment's return</span></a>
+          <a href="fire-number-calculator.html" class="rel-tool"><div class="rt-icon">🔥</div><strong>FIRE Number</strong><span>How much to retire early?</span></a>
+          <a href="dca-calculator.html" class="rel-tool"><div class="rt-icon">📊</div><strong>DCA Simulator</strong><span>Dollar-cost averaging returns</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+
+  <div class="ad-slot ad-slot--horizontal"><span class="ad-label">Advertisement</span></div>
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="/" class="logo">Wealth<span>Axis</span></a><p>Free investment tools and finance insights.</p></div><div class="footer-links"><h4>Tools</h4><a href="compound-interest-calculator.html">Compound Interest</a><a href="roi-calculator.html">ROI Calculator</a><a href="fire-number-calculator.html">FIRE Number</a><a href="dca-calculator.html">DCA Simulator</a><a href="index.html">All Tools →</a></div><div class="footer-links"><h4>Legal</h4><a href="../disclaimer.html">Disclaimer</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a></div></div><div class="footer-bottom"><p>© 2026 WealthAxis. For informational purposes only. Not financial advice.</p></div></div></footer>
+
+  <script src="../js/main.js"></script>
+  <script>
+    function fmt(n){return'$'+Math.round(n).toLocaleString('en-US')}
+    function pct(n){return n.toFixed(2)+'%'}
+
+    function calcCompound(){
+      const P=parseFloat(document.getElementById('c-principal').value)||0;
+      const M=parseFloat(document.getElementById('c-monthly').value)||0;
+      const rAnnual=(parseFloat(document.getElementById('c-rate').value)||0)/100;
+      const years=parseFloat(document.getElementById('c-years').value)||0;
+      const n=parseFloat(document.getElementById('c-freq').value)||12;
+      const inf=(parseFloat(document.getElementById('c-inflation').value)||0)/100;
+      const r=rAnnual/n;
+      const periods=years*n;
+      const totalContrib=P+M*years*12;
+
+      // Final balance
+      let balance=P*Math.pow(1+r,periods);
+      if(M>0&&r>0) balance+=M*(Math.pow(1+r,periods)-1)/r*(n/12);
+      else if(M>0) balance+=M*years*12;
+
+      const interest=balance-totalContrib;
+      const interestPct=(interest/totalContrib*100);
+      const realValue=balance/Math.pow(1+inf,years);
+      const ear=(Math.pow(1+rAnnual/n,n)-1)*100;
+      const doubling=rAnnual>0?72/rAnnual:0;
+
+      document.getElementById('r-final').textContent=fmt(balance);
+      document.getElementById('r-contrib').textContent=fmt(totalContrib);
+      document.getElementById('r-interest').textContent=fmt(interest);
+      document.getElementById('r-interest-pct').textContent=interestPct.toFixed(0)+'% of final balance';
+      document.getElementById('r-real').textContent=fmt(realValue);
+      document.getElementById('r-ear').textContent=pct(ear);
+      document.getElementById('r-double').textContent=doubling>0?doubling.toFixed(1)+' yrs':'—';
+      document.getElementById('results').style.display='block';
+
+      // Bar chart
+      const chartEl=document.getElementById('bar-chart');
+      chartEl.innerHTML='';
+      const steps=Math.min(years,10);
+      const stepSize=years/steps;
+      let maxVal=0;
+      const data=[];
+      for(let i=1;i<=steps;i++){
+        const y=i*stepSize;
+        const p2=years*n;
+        const r2=rAnnual/n;
+        const periods2=y*n;
+        let b=P*Math.pow(1+r2,periods2);
+        if(M>0&&r2>0) b+=M*(Math.pow(1+r2,periods2)-1)/r2*(n/12);
+        else if(M>0) b+=M*y*12;
+        const c=P+M*y*12;
+        const g=b-c;
+        if(b>maxVal)maxVal=b;
+        data.push({y:Math.round(y),b,c,g});
+      }
+      data.forEach(d=>{
+        const wrap=document.createElement('div');
+        wrap.className='bar-wrap';
+        const pctTotal=d.b/maxVal*100;
+        const pctContrib=(d.c/d.b)*pctTotal;
+        const pctGrowth=pctTotal-pctContrib;
+        wrap.innerHTML=`<div class="bar-stack"><div class="bar-growth" style="height:${pctGrowth}%"></div><div class="bar-contrib" style="height:${pctContrib}%"></div></div><div class="bar-label">Y${d.y}</div>`;
+        chartEl.appendChild(wrap);
+      });
+    }
+    calcCompound();
+  </script>
+</body>
+</html>

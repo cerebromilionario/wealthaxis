@@ -3,8 +3,32 @@
   <url><loc>https://wealthaxis.netlify.app/</loc><priority>1.0</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://wealthaxis.netlify.app/blog/index.html</loc><priority>0.9</priority><changefreq>weekly</changefreq></url>
   <url><loc>https://wealthaxis.netlify.app/tools/index.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <!-- Tools -->
+  <url><loc>https://wealthaxis.netlify.app/tools/compound-interest-calculator.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/roi-calculator.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/fire-number-calculator.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/dca-calculator.html</loc><priority>0.9</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/investment-fee-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/savings-goal-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/net-worth-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/inflation-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/budget-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/retirement-withdrawal-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <!-- Blog articles -->
   <url><loc>https://wealthaxis.netlify.app/blog/compound-interest-guide.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://wealthaxis.netlify.app/blog/etf-vs-mutual-funds.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://wealthaxis.netlify.app/blog/portfolio-diversification.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://wealthaxis.netlify.app/blog/dividend-investing.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/blog/fire-movement.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/blog/index-fund-investing.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/blog/real-estate-reits.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/blog/bitcoin-portfolio-hedge.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/blog/tax-loss-harvesting.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/blog/dollar-cost-averaging.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/blog/roth-ira-guide.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <!-- Legal -->
+  <url><loc>https://wealthaxis.netlify.app/disclaimer.html</loc><priority>0.5</priority></url>
+  <url><loc>https://wealthaxis.netlify.app/privacy-policy.html</loc><priority>0.5</priority></url>
+  <url><loc>https://wealthaxis.netlify.app/terms-of-use.html</loc><priority>0.5</priority></url>
+  <url><loc>https://wealthaxis.netlify.app/contact.html</loc><priority>0.5</priority></url>
 </urlset>

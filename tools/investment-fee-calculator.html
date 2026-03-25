@@ -1,0 +1,125 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Investment Fee Calculator — See the True Cost of Fund Fees | WealthAxis</title>
+  <meta name="description" content="Free investment fee calculator. Discover how much fund expense ratios and advisor fees truly cost over 10, 20, and 30 years. Compare low-cost index funds vs high-fee actively managed funds."/>
+  <link rel="canonical" href="https://wealthaxis.netlify.app/tools/investment-fee-calculator.html"/>
+  <meta name="google-adsense-account" content="ca-pub-4613426749830025">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4613426749830025" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css"/>
+  <style>
+    .tool-page{padding:100px 0 60px}.tool-page-inner{max-width:900px;margin:0 auto;padding:0 24px}.tool-hero{text-align:center;margin-bottom:48px}.tool-hero .section-tag{display:block;margin-bottom:12px}.tool-hero h1{font-family:var(--font-display);font-size:clamp(1.8rem,4vw,2.8rem);font-weight:900;letter-spacing:-1px;margin-bottom:16px}.tool-hero p{color:var(--text-muted);font-size:1.05rem;max-width:600px;margin:0 auto}.tool-main-card{background:var(--surface);border:1px solid var(--border);border-radius:20px;padding:40px;margin-bottom:32px}.tool-grid{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-bottom:24px}.tg-group{display:flex;flex-direction:column;gap:6px}.tg-group label{font-size:.75rem;color:var(--text-muted);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em}.tg-group input{background:var(--bg);border:1px solid var(--border);border-radius:8px;padding:12px 16px;color:var(--text);font-family:var(--font-body);font-size:1rem;outline:none;transition:border-color .2s;width:100%}.tg-group input:focus{border-color:var(--gold)}.tool-calc-btn{width:100%;background:var(--gold);color:var(--bg);border:none;border-radius:10px;padding:15px;font-weight:700;font-size:1rem;cursor:pointer;font-family:var(--font-body);transition:opacity .2s;margin-top:8px}.tool-calc-btn:hover{opacity:.88}.fee-compare{display:grid;grid-template-columns:1fr 1fr;gap:20px;margin-top:28px}.fee-card{background:var(--bg);border:2px solid var(--border);border-radius:16px;padding:24px}.fee-card.lowfee{border-color:var(--green)}.fee-card.highfee{border-color:var(--red)}.fee-card-title{font-family:var(--font-display);font-weight:700;font-size:1.1rem;margin-bottom:4px}.fee-card-sub{font-size:.8rem;color:var(--text-muted);margin-bottom:16px;font-family:var(--font-mono)}.fee-card-value{font-family:var(--font-display);font-size:2rem;font-weight:900;margin-bottom:6px}.fee-card.lowfee .fee-card-value{color:var(--green)}.fee-card.highfee .fee-card-value{color:var(--red)}.fee-card-detail{font-size:.8rem;color:var(--text-muted)}.damage-box{background:var(--bg);border:2px solid var(--red);border-radius:16px;padding:24px;margin-top:20px;text-align:center}.damage-box .d-label{font-size:.8rem;color:var(--text-muted);font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;margin-bottom:8px}.damage-box .d-value{font-family:var(--font-display);font-size:2.4rem;font-weight:900;color:var(--red);margin-bottom:8px}.damage-box .d-sub{font-size:.9rem;color:var(--text-muted)}.timeline-table{width:100%;border-collapse:collapse;margin-top:20px}.timeline-table th{font-size:.72rem;font-family:var(--font-mono);text-transform:uppercase;letter-spacing:.06em;color:var(--text-dim);padding:8px 12px;border-bottom:1px solid var(--border);text-align:right}.timeline-table th:first-child{text-align:left}.timeline-table td{padding:10px 12px;border-bottom:1px solid var(--border);font-family:var(--font-mono);font-size:.85rem;text-align:right}.timeline-table td:first-child{text-align:left;color:var(--text-muted)}.timeline-table .low{color:var(--green)}.timeline-table .high{color:var(--red)}.timeline-table .diff{color:var(--gold);font-weight:600}.tool-faq{margin-top:48px}.tool-faq h2{font-family:var(--font-display);font-size:1.6rem;font-weight:700;margin-bottom:24px}.faq-item{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px 24px;margin-bottom:12px}.faq-item h3{font-size:1rem;font-weight:600;margin-bottom:10px}.faq-item p{font-size:.9rem;color:var(--text-muted);line-height:1.7;margin:0}.related-tools{display:grid;grid-template-columns:repeat(3,1fr);gap:16px;margin-top:16px}.rel-tool{background:var(--surface);border:1px solid var(--border);border-radius:10px;padding:20px;transition:border-color .2s,transform .2s;display:block}.rel-tool:hover{border-color:var(--gold);transform:translateY(-2px)}.rel-tool .rt-icon{font-size:1.5rem;margin-bottom:8px}.rel-tool strong{display:block;font-size:.9rem;font-weight:600;margin-bottom:4px}.rel-tool span{font-size:.78rem;color:var(--text-muted)}@media(max-width:700px){.tool-grid{grid-template-columns:1fr}.fee-compare{grid-template-columns:1fr}.related-tools{grid-template-columns:1fr 1fr}}
+  </style>
+</head>
+<body>
+  <nav class="nav" id="nav"><div class="nav-inner"><a href="/" class="logo">Wealth<span>Axis</span></a><ul class="nav-links"><li><a href="/blog/index.html">Blog</a></li><li><a href="/tools/index.html" style="color:var(--gold)">Tools</a></li><li><a href="/#newsletter" class="nav-cta">Free Newsletter</a></li></ul><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div><div class="nav-mobile" id="nav-mobile"><a href="/blog/index.html">Blog</a><a href="/tools/index.html">Tools</a></div></nav>
+  <div class="ad-slot ad-slot--horizontal" style="margin-top:64px"><span class="ad-label">Advertisement</span></div>
+  <div class="tool-page">
+    <div class="tool-page-inner">
+      <div class="tool-hero">
+        <span class="section-tag">Free Calculator</span>
+        <h1>Investment Fee Calculator</h1>
+        <p>Small fees compound into massive wealth destruction over time. See exactly how much expense ratios and advisor fees are costing your future.</p>
+      </div>
+      <div class="tool-main-card">
+        <div class="tool-grid">
+          <div class="tg-group"><label>Portfolio Value ($)</label><input type="number" id="fee-portfolio" value="100000" min="0"/></div>
+          <div class="tg-group"><label>Annual Contribution ($)</label><input type="number" id="fee-annual" value="12000" min="0"/></div>
+          <div class="tg-group"><label>Gross Return Rate (%)</label><input type="number" id="fee-return" value="8" min="0" max="20" step="0.1"/></div>
+          <div class="tg-group"><label>Time Horizon (Years)</label><input type="number" id="fee-years" value="30" min="1" max="50"/></div>
+          <div class="tg-group"><label>Low-Cost Fund Fee (%) e.g. 0.03</label><input type="number" id="fee-low" value="0.03" min="0" max="5" step="0.01"/></div>
+          <div class="tg-group"><label>High-Cost Fund Fee (%) e.g. 1.00</label><input type="number" id="fee-high" value="1.00" min="0" max="5" step="0.01"/></div>
+        </div>
+        <button class="tool-calc-btn" onclick="calcFees()">Calculate Fee Damage →</button>
+        <div id="results" style="display:none">
+          <div class="fee-compare">
+            <div class="fee-card lowfee">
+              <div class="fee-card-title">✅ Low-Cost Fund</div>
+              <div class="fee-card-sub" id="low-fee-label">0.03% expense ratio</div>
+              <div class="fee-card-value" id="low-final">—</div>
+              <div class="fee-card-detail" id="low-detail">—</div>
+            </div>
+            <div class="fee-card highfee">
+              <div class="fee-card-title">❌ High-Cost Fund</div>
+              <div class="fee-card-sub" id="high-fee-label">1.00% expense ratio</div>
+              <div class="fee-card-value" id="high-final">—</div>
+              <div class="fee-card-detail" id="high-detail">—</div>
+            </div>
+          </div>
+          <div class="damage-box">
+            <div class="d-label">💸 Total Wealth Destroyed by High Fees</div>
+            <div class="d-value" id="fee-damage">—</div>
+            <div class="d-sub" id="fee-damage-sub">—</div>
+          </div>
+          <table class="timeline-table" id="timeline-table">
+            <thead><tr><th>Year</th><th>Low-Cost Balance</th><th>High-Cost Balance</th><th>Fee Damage</th></tr></thead>
+            <tbody id="timeline-body"></tbody>
+          </table>
+        </div>
+      </div>
+      <div class="ad-slot ad-slot--horizontal" style="border-radius:12px;border:1px solid var(--border);margin-bottom:40px"><span class="ad-label">Advertisement</span></div>
+      <div class="tool-faq">
+        <h2>Why Fund Fees Matter So Much</h2>
+        <div class="faq-item"><h3>What is an expense ratio?</h3><p>An expense ratio is the annual fee a mutual fund or ETF charges, expressed as a percentage of assets. A 1% expense ratio on a $100,000 portfolio costs $1,000/year — but because that $1,000 can't compound, the actual long-term cost is vastly higher. Low-cost index ETFs like VOO charge 0.03%, while actively managed funds often charge 0.5-1.5%.</p></div>
+        <div class="faq-item"><h3>Are there other fees beyond expense ratios?</h3><p>Yes: load fees (sales commissions of 3-5% charged at purchase or redemption), 12b-1 fees (marketing fees embedded in the expense ratio), trading commissions (largely eliminated at major brokerages in 2020), and advisory fees (typically 0.25-1% annually for financial advisors or robo-advisors). Total cost of ownership can exceed 2% annually when all fees are included.</p></div>
+        <div class="faq-item"><h3>What expense ratio should I target?</h3><p>Broad market index ETFs from Vanguard, Fidelity, and Schwab offer expense ratios of 0.03-0.10% — essentially free. As a rule of thumb: under 0.10% is excellent, 0.10-0.30% is acceptable, 0.30-0.75% requires strong justification, and above 0.75% is very difficult to justify given the evidence that active management rarely outperforms net of fees.</p></div>
+      </div>
+      <div style="margin-top:48px"><h2 style="font-family:var(--font-display);font-size:1.4rem;font-weight:700;margin-bottom:20px">Related Calculators</h2>
+        <div class="related-tools">
+          <a href="compound-interest-calculator.html" class="rel-tool"><div class="rt-icon">📈</div><strong>Compound Interest</strong><span>See the power of compounding</span></a>
+          <a href="roi-calculator.html" class="rel-tool"><div class="rt-icon">💰</div><strong>ROI Calculator</strong><span>True after-fee returns</span></a>
+          <a href="fire-number-calculator.html" class="rel-tool"><div class="rt-icon">🔥</div><strong>FIRE Number</strong><span>Retirement target calculator</span></a>
+        </div>
+      </div>
+    </div>
+  </div>
+  <div class="ad-slot ad-slot--horizontal"><span class="ad-label">Advertisement</span></div>
+  <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 WealthAxis. For informational purposes only. Not financial advice. | <a href="../disclaimer.html" style="color:var(--gold)">Disclaimer</a></p></div></div></footer>
+  <script src="../js/main.js"></script>
+  <script>
+    function fmt(n){return'$'+Math.round(n).toLocaleString('en-US')}
+    function grow(P,contrib,r,years){
+      let b=P;const mr=r/12;
+      for(let i=0;i<years*12;i++){b=b*(1+mr)+contrib/12;}
+      return b;
+    }
+    function calcFees(){
+      const P=parseFloat(document.getElementById('fee-portfolio').value)||0;
+      const annual=parseFloat(document.getElementById('fee-annual').value)||0;
+      const gross=(parseFloat(document.getElementById('fee-return').value)||8)/100;
+      const years=parseFloat(document.getElementById('fee-years').value)||30;
+      const lowFee=(parseFloat(document.getElementById('fee-low').value)||0.03)/100;
+      const highFee=(parseFloat(document.getElementById('fee-high').value)||1.0)/100;
+      const lowNet=gross-lowFee;
+      const highNet=gross-highFee;
+      const lowFinal=grow(P,annual,lowNet,years);
+      const highFinal=grow(P,annual,highNet,years);
+      const damage=lowFinal-highFinal;
+      document.getElementById('low-fee-label').textContent=(lowFee*100).toFixed(2)+'% expense ratio';
+      document.getElementById('high-fee-label').textContent=(highFee*100).toFixed(2)+'% expense ratio';
+      document.getElementById('low-final').textContent=fmt(lowFinal);
+      document.getElementById('low-detail').textContent='Net return: '+(lowNet*100).toFixed(2)+'%/yr';
+      document.getElementById('high-final').textContent=fmt(highFinal);
+      document.getElementById('high-detail').textContent='Net return: '+(highNet*100).toFixed(2)+'%/yr';
+      document.getElementById('fee-damage').textContent=fmt(damage);
+      document.getElementById('fee-damage-sub').textContent=`That's ${(damage/(P+annual*years)*100).toFixed(0)}% of your total contributions — gone to fees`;
+      // Timeline table
+      const tbody=document.getElementById('timeline-body');
+      tbody.innerHTML='';
+      const checkpoints=[5,10,15,20,25,30,40].filter(y=>y<=years);
+      if(!checkpoints.includes(years))checkpoints.push(years);
+      checkpoints.forEach(y=>{
+        const lv=grow(P,annual,lowNet,y);
+        const hv=grow(P,annual,highNet,y);
+        const d=lv-hv;
+        tbody.innerHTML+=`<tr><td>Year ${y}</td><td class="low">${fmt(lv)}</td><td class="high">${fmt(hv)}</td><td class="diff">${fmt(d)}</td></tr>`;
+      });
+      document.getElementById('results').style.display='block';
+    }
+    calcFees();
+  </script>
+</body>
+</html>

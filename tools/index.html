@@ -1,301 +1,124 @@
 <!DOCTYPE html>
 <html lang="en">
 <head>
-  <meta charset="UTF-8" />
-  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-  <title>Free Investment Calculators & Tools | WealthAxis</title>
-  <meta name="description" content="Free investment tools for serious investors: compound interest calculator, ROI calculator, FIRE number, DCA simulator, and more. Run the numbers before you invest." />
-  <link rel="canonical" href="https://wealthaxis.netlify.app/tools/" />
-  <link rel="preconnect" href="https://fonts.googleapis.com">
-  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
-  <link rel="stylesheet" href="../css/style.css" />
-  <!-- Google AdSense -->
+  <meta charset="UTF-8"/><meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Free Investment & Finance Calculators — 10 Tools | WealthAxis</title>
+  <meta name="description" content="10 free investment and finance calculators: compound interest, ROI, FIRE number, DCA simulator, fee impact, savings goal, net worth, inflation, budget, and retirement withdrawal."/>
+  <link rel="canonical" href="https://wealthaxis.netlify.app/tools/"/>
   <meta name="google-adsense-account" content="ca-pub-4613426749830025">
   <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4613426749830025" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css"/>
 </head>
 <body>
-  <nav class="nav" id="nav">
-    <div class="nav-inner">
-      <a href="/" class="logo">Wealth<span>Axis</span></a>
-      <ul class="nav-links">
-        <li><a href="/blog/index.html">Blog</a></li>
-        <li><a href="/tools/index.html" style="color:var(--gold)">Tools</a></li>
-        <li><a href="/#categories">Topics</a></li>
-        <li><a href="/#newsletter" class="nav-cta">Free Newsletter</a></li>
-      </ul>
-      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
-    </div>
-    <div class="nav-mobile" id="nav-mobile">
-      <a href="/blog/index.html">Blog</a>
-      <a href="/tools/index.html">Tools</a>
-      <a href="/#newsletter">Newsletter</a>
-    </div>
-  </nav>
+  <nav class="nav" id="nav"><div class="nav-inner"><a href="/" class="logo">Wealth<span>Axis</span></a><ul class="nav-links"><li><a href="/blog/index.html">Blog</a></li><li><a href="/tools/index.html" style="color:var(--gold)">Tools</a></li><li><a href="/#newsletter" class="nav-cta">Free Newsletter</a></li></ul><button class="hamburger" id="hamburger"><span></span><span></span><span></span></button></div><div class="nav-mobile" id="nav-mobile"><a href="/blog/index.html">Blog</a><a href="/tools/index.html">Tools</a></div></nav>
 
   <div class="page-hero">
     <div class="container">
       <span class="section-tag">Free Tools</span>
       <h1>Investment Calculators</h1>
-      <p>Run the numbers on any investment strategy before you commit your money.</p>
+      <p>10 free, data-driven tools to help you invest smarter, plan better, and retire richer.</p>
     </div>
   </div>
 
-  <!-- AD SLOT -->
   <div class="ad-slot ad-slot--horizontal"><span class="ad-label">Advertisement</span></div>
 
-  <div class="container">
-    <div class="tools-grid" style="padding-top:60px;padding-bottom:60px">
+  <div class="container" style="padding:60px 24px">
+    <div style="display:grid;grid-template-columns:repeat(2,1fr);gap:24px">
 
-      <!-- COMPOUND INTEREST -->
-      <div class="tool-card" id="compound">
-        <div class="tool-card-header">
-          <span class="tool-card-icon">📈</span>
-          <div>
-            <h3>Compound Interest Calculator</h3>
-            <p>Visualize exponential growth over time</p>
-          </div>
+      <a href="compound-interest-calculator.html" style="display:block;text-decoration:none">
+        <div class="tool-card" style="height:100%;transition:border-color .2s,transform .2s;cursor:pointer">
+          <div class="tool-card-header"><span class="tool-card-icon">📈</span><div><h3>Compound Interest Calculator</h3><p>Visualize exponential growth over time with a dynamic bar chart</p></div></div>
+          <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px">Enter your initial investment, monthly contributions, rate and time to see exactly how $500/month becomes $1.2M+.</p>
+          <span style="font-size:.8rem;color:var(--gold);font-family:var(--font-mono);font-weight:600">Open Calculator →</span>
         </div>
-        <form class="tool-form" id="compound-form">
-          <div class="form-row">
-            <div class="form-group">
-              <label>Initial Investment ($)</label>
-              <input type="number" id="c-principal" value="10000" min="0" />
-            </div>
-            <div class="form-group">
-              <label>Monthly Contribution ($)</label>
-              <input type="number" id="c-monthly" value="500" min="0" />
-            </div>
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Annual Return (%)</label>
-              <input type="number" id="c-rate" value="8" min="0" max="100" step="0.1" />
-            </div>
-            <div class="form-group">
-              <label>Time Period (years)</label>
-              <input type="number" id="c-years" value="30" min="1" max="60" />
-            </div>
-          </div>
-          <button type="button" class="calc-btn" onclick="calcCompound()">Calculate →</button>
-          <div class="result-box" id="compound-result">
-            <div class="result-label">Final Balance</div>
-            <div class="result-value" id="c-result-value">—</div>
-            <div class="result-sub" id="c-result-sub"></div>
-          </div>
-        </form>
-      </div>
+      </a>
 
-      <!-- ROI CALCULATOR -->
-      <div class="tool-card" id="roi">
-        <div class="tool-card-header">
-          <span class="tool-card-icon">💰</span>
-          <div>
-            <h3>ROI Calculator</h3>
-            <p>Calculate return on any investment</p>
-          </div>
+      <a href="roi-calculator.html" style="display:block;text-decoration:none">
+        <div class="tool-card" style="height:100%;transition:border-color .2s,transform .2s;cursor:pointer">
+          <div class="tool-card-header"><span class="tool-card-icon">💰</span><div><h3>ROI Calculator</h3><p>Calculate total and annualized return on any investment</p></div></div>
+          <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px">Compute total ROI, CAGR, after-tax profit, and compare your return against S&P 500 and bond benchmarks.</p>
+          <span style="font-size:.8rem;color:var(--gold);font-family:var(--font-mono);font-weight:600">Open Calculator →</span>
         </div>
-        <form class="tool-form" id="roi-form">
-          <div class="form-group">
-            <label>Initial Investment ($)</label>
-            <input type="number" id="r-initial" value="5000" min="0" />
-          </div>
-          <div class="form-group">
-            <label>Final Value ($)</label>
-            <input type="number" id="r-final" value="8500" min="0" />
-          </div>
-          <div class="form-group">
-            <label>Time Held (years)</label>
-            <input type="number" id="r-years" value="3" min="0.1" step="0.5" />
-          </div>
-          <button type="button" class="calc-btn" onclick="calcROI()">Calculate →</button>
-          <div class="result-box" id="roi-result">
-            <div class="result-label">Total ROI</div>
-            <div class="result-value" id="r-result-value">—</div>
-            <div class="result-sub" id="r-result-sub"></div>
-          </div>
-        </form>
-      </div>
+      </a>
 
-      <!-- FIRE CALCULATOR -->
-      <div class="tool-card" id="fire">
-        <div class="tool-card-header">
-          <span class="tool-card-icon">🔥</span>
-          <div>
-            <h3>FIRE Number Calculator</h3>
-            <p>How much do you need to retire early?</p>
-          </div>
+      <a href="fire-number-calculator.html" style="display:block;text-decoration:none">
+        <div class="tool-card" style="height:100%;transition:border-color .2s,transform .2s;cursor:pointer">
+          <div class="tool-card-header"><span class="tool-card-icon">🔥</span><div><h3>FIRE Number Calculator</h3><p>How much do you need to retire early?</p></div></div>
+          <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px">Find your exact FIRE target, years to retirement, and see Lean/Fat FIRE comparisons with a visual progress tracker.</p>
+          <span style="font-size:.8rem;color:var(--gold);font-family:var(--font-mono);font-weight:600">Open Calculator →</span>
         </div>
-        <form class="tool-form">
-          <div class="form-group">
-            <label>Annual Expenses in Retirement ($)</label>
-            <input type="number" id="f-expenses" value="60000" min="0" />
-          </div>
-          <div class="form-group">
-            <label>Safe Withdrawal Rate (%)</label>
-            <input type="number" id="f-swr" value="4" min="1" max="10" step="0.1" />
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Current Savings ($)</label>
-              <input type="number" id="f-savings" value="80000" min="0" />
-            </div>
-            <div class="form-group">
-              <label>Annual Savings ($)</label>
-              <input type="number" id="f-annual" value="30000" min="0" />
-            </div>
-          </div>
-          <button type="button" class="calc-btn" onclick="calcFIRE()">Calculate →</button>
-          <div class="result-box" id="fire-result">
-            <div class="result-label">Your FIRE Number</div>
-            <div class="result-value" id="f-result-value">—</div>
-            <div class="result-sub" id="f-result-sub"></div>
-          </div>
-        </form>
-      </div>
+      </a>
 
-      <!-- DCA SIMULATOR -->
-      <div class="tool-card" id="dca">
-        <div class="tool-card-header">
-          <span class="tool-card-icon">📊</span>
-          <div>
-            <h3>DCA vs Lump Sum Simulator</h3>
-            <p>Dollar-cost average vs investing all at once</p>
-          </div>
+      <a href="dca-calculator.html" style="display:block;text-decoration:none">
+        <div class="tool-card" style="height:100%;transition:border-color .2s,transform .2s;cursor:pointer">
+          <div class="tool-card-header"><span class="tool-card-icon">📊</span><div><h3>DCA vs Lump Sum Simulator</h3><p>Which strategy builds more wealth?</p></div></div>
+          <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px">Compare dollar-cost averaging vs investing all at once. See side-by-side final values, CAGR, and a clear winner verdict.</p>
+          <span style="font-size:.8rem;color:var(--gold);font-family:var(--font-mono);font-weight:600">Open Calculator →</span>
         </div>
-        <form class="tool-form">
-          <div class="form-group">
-            <label>Total Amount to Invest ($)</label>
-            <input type="number" id="d-total" value="12000" min="0" />
-          </div>
-          <div class="form-row">
-            <div class="form-group">
-              <label>Annual Return (%)</label>
-              <input type="number" id="d-rate" value="8" min="0" max="100" step="0.1" />
-            </div>
-            <div class="form-group">
-              <label>DCA Period (months)</label>
-              <input type="number" id="d-months" value="12" min="1" max="60" />
-            </div>
-          </div>
-          <div class="form-group">
-            <label>Investment Horizon (years)</label>
-            <input type="number" id="d-years" value="20" min="1" max="50" />
-          </div>
-          <button type="button" class="calc-btn" onclick="calcDCA()">Compare →</button>
-          <div class="result-box" id="dca-result">
-            <div class="result-label">Lump Sum Final Value</div>
-            <div class="result-value" id="d-result-lump">—</div>
-            <div class="result-sub" id="d-result-sub"></div>
-          </div>
-        </form>
-      </div>
+      </a>
+
+      <a href="investment-fee-calculator.html" style="display:block;text-decoration:none">
+        <div class="tool-card" style="height:100%;transition:border-color .2s,transform .2s;cursor:pointer">
+          <div class="tool-card-header"><span class="tool-card-icon">💸</span><div><h3>Investment Fee Calculator</h3><p>See the true long-term cost of fund fees</p></div></div>
+          <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px">A 1% fee vs 0.03% seems small. See how it destroys hundreds of thousands in wealth over a 30-year horizon.</p>
+          <span style="font-size:.8rem;color:var(--gold);font-family:var(--font-mono);font-weight:600">Open Calculator →</span>
+        </div>
+      </a>
+
+      <a href="savings-goal-calculator.html" style="display:block;text-decoration:none">
+        <div class="tool-card" style="height:100%;transition:border-color .2s,transform .2s;cursor:pointer">
+          <div class="tool-card-header"><span class="tool-card-icon">🎯</span><div><h3>Savings Goal Calculator</h3><p>Plan any financial target with a deadline</p></div></div>
+          <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px">Enter any goal — house down payment, emergency fund, vacation — and see exactly how long it takes or how much to save monthly.</p>
+          <span style="font-size:.8rem;color:var(--gold);font-family:var(--font-mono);font-weight:600">Open Calculator →</span>
+        </div>
+      </a>
+
+      <a href="net-worth-calculator.html" style="display:block;text-decoration:none">
+        <div class="tool-card" style="height:100%;transition:border-color .2s,transform .2s;cursor:pointer">
+          <div class="tool-card-header"><span class="tool-card-icon">🏦</span><div><h3>Net Worth Calculator</h3><p>Your complete financial picture in one number</p></div></div>
+          <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px">Add all assets and liabilities — investments, real estate, loans, credit cards — to calculate your true net worth instantly.</p>
+          <span style="font-size:.8rem;color:var(--gold);font-family:var(--font-mono);font-weight:600">Open Calculator →</span>
+        </div>
+      </a>
+
+      <a href="inflation-calculator.html" style="display:block;text-decoration:none">
+        <div class="tool-card" style="height:100%;transition:border-color .2s,transform .2s;cursor:pointer">
+          <div class="tool-card-header"><span class="tool-card-icon">📉</span><div><h3>Inflation Calculator</h3><p>What is your money worth in the future?</p></div></div>
+          <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px">See how inflation erodes purchasing power and compare it against investment returns to understand your real financial picture.</p>
+          <span style="font-size:.8rem;color:var(--gold);font-family:var(--font-mono);font-weight:600">Open Calculator →</span>
+        </div>
+      </a>
+
+      <a href="budget-calculator.html" style="display:block;text-decoration:none">
+        <div class="tool-card" style="height:100%;transition:border-color .2s,transform .2s;cursor:pointer">
+          <div class="tool-card-header"><span class="tool-card-icon">📋</span><div><h3>50/30/20 Budget Calculator</h3><p>Build your perfect monthly budget</p></div></div>
+          <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px">Enter your income and current spending to get an instant budget analysis — needs, wants, and savings — with personalized recommendations.</p>
+          <span style="font-size:.8rem;color:var(--gold);font-family:var(--font-mono);font-weight:600">Open Calculator →</span>
+        </div>
+      </a>
+
+      <a href="retirement-withdrawal-calculator.html" style="display:block;text-decoration:none">
+        <div class="tool-card" style="height:100%;transition:border-color .2s,transform .2s;cursor:pointer">
+          <div class="tool-card-header"><span class="tool-card-icon">🏖️</span><div><h3>Retirement Withdrawal Calculator</h3><p>How long will your savings last?</p></div></div>
+          <p style="font-size:.88rem;color:var(--text-muted);margin-bottom:16px">Model your exact retirement balance year by year. Find the safe withdrawal amount, add Social Security income, and see a full depletion timeline.</p>
+          <span style="font-size:.8rem;color:var(--gold);font-family:var(--font-mono);font-weight:600">Open Calculator →</span>
+        </div>
+      </a>
 
     </div>
 
-    <!-- AD SLOT BOTTOM -->
-    <div class="ad-slot ad-slot--horizontal" style="border-radius:12px;border:1px solid var(--border);margin-bottom:60px"><span class="ad-label">Advertisement</span></div>
+    <div class="ad-slot ad-slot--horizontal" style="border-radius:12px;border:1px solid var(--border);margin-top:40px"><span class="ad-label">Advertisement</span></div>
+
+    <div style="margin-top:48px;background:var(--surface);border:1px solid var(--border);border-radius:16px;padding:36px">
+      <h2 style="font-family:var(--font-display);font-size:1.5rem;font-weight:700;margin-bottom:12px">Why Use WealthAxis Calculators?</h2>
+      <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8;margin-bottom:12px">All our calculators are 100% free, run entirely in your browser (no data sent anywhere), and are built on sound financial math used by professional planners. We don't sell your data or require email sign-ups to use any tool.</p>
+      <p style="color:var(--text-muted);font-size:.95rem;line-height:1.8">Each calculator includes detailed explanations, FAQ sections, and links to our in-depth articles so you understand not just the numbers — but the strategy behind them. Financial literacy is the most valuable investment you can make.</p>
+    </div>
   </div>
 
-  <footer class="footer">
-    <div class="container">
-      <div class="footer-bottom">
-        <p>© 2026 WealthAxis. For informational purposes only. Not financial advice.</p>
-      </div>
-    </div>
-  </footer>
-
+  <footer class="footer"><div class="container"><div class="footer-grid"><div class="footer-brand"><a href="/" class="logo">Wealth<span>Axis</span></a><p>Free investment tools and expert finance insights.</p></div><div class="footer-links"><h4>Tools</h4><a href="compound-interest-calculator.html">Compound Interest</a><a href="roi-calculator.html">ROI Calculator</a><a href="fire-number-calculator.html">FIRE Number</a><a href="dca-calculator.html">DCA Simulator</a><a href="investment-fee-calculator.html">Fee Calculator</a></div><div class="footer-links"><h4>More Tools</h4><a href="savings-goal-calculator.html">Savings Goal</a><a href="net-worth-calculator.html">Net Worth</a><a href="inflation-calculator.html">Inflation</a><a href="budget-calculator.html">Budget 50/30/20</a><a href="retirement-withdrawal-calculator.html">Retirement Withdrawal</a></div><div class="footer-links"><h4>Legal</h4><a href="../disclaimer.html">Disclaimer</a><a href="../privacy-policy.html">Privacy Policy</a><a href="../terms-of-use.html">Terms of Use</a><a href="../contact.html">Contact</a></div></div><div class="footer-bottom"><p>© 2026 WealthAxis. For informational purposes only. Not financial advice.</p></div></div></footer>
   <script src="../js/main.js"></script>
-  <script>
-    function fmt(n) {
-      return '$' + Math.round(n).toLocaleString('en-US');
-    }
-    function pct(n) {
-      return n.toFixed(2) + '%';
-    }
-
-    function calcCompound() {
-      const P = parseFloat(document.getElementById('c-principal').value) || 0;
-      const M = parseFloat(document.getElementById('c-monthly').value) || 0;
-      const r = (parseFloat(document.getElementById('c-rate').value) || 0) / 100 / 12;
-      const n = (parseFloat(document.getElementById('c-years').value) || 0) * 12;
-      const totalContrib = P + M * n;
-
-      let balance = P;
-      for (let i = 0; i < n; i++) {
-        balance = balance * (1 + r) + M;
-      }
-
-      const growth = balance - totalContrib;
-      const el = document.getElementById('compound-result');
-      document.getElementById('c-result-value').textContent = fmt(balance);
-      document.getElementById('c-result-sub').textContent =
-        `Contributions: ${fmt(totalContrib)} · Growth: ${fmt(growth)} (${pct(growth / totalContrib * 100)})`;
-      el.classList.add('visible');
-    }
-
-    function calcROI() {
-      const initial = parseFloat(document.getElementById('r-initial').value) || 1;
-      const final = parseFloat(document.getElementById('r-final').value) || 0;
-      const years = parseFloat(document.getElementById('r-years').value) || 1;
-      const totalROI = (final - initial) / initial * 100;
-      const annualROI = (Math.pow(final / initial, 1 / years) - 1) * 100;
-      const profit = final - initial;
-
-      document.getElementById('r-result-value').textContent = pct(totalROI);
-      document.getElementById('r-result-sub').textContent =
-        `Profit: ${fmt(profit)} · Annualized ROI: ${pct(annualROI)} · CAGR`;
-      document.getElementById('roi-result').classList.add('visible');
-    }
-
-    function calcFIRE() {
-      const expenses = parseFloat(document.getElementById('f-expenses').value) || 0;
-      const swr = (parseFloat(document.getElementById('f-swr').value) || 4) / 100;
-      const savings = parseFloat(document.getElementById('f-savings').value) || 0;
-      const annual = parseFloat(document.getElementById('f-annual').value) || 0;
-
-      const fireNumber = expenses / swr;
-      const remaining = Math.max(0, fireNumber - savings);
-      const yearsToFIRE = annual > 0 ? Math.ceil(remaining / annual) : Infinity;
-
-      document.getElementById('f-result-value').textContent = fmt(fireNumber);
-      document.getElementById('f-result-sub').textContent =
-        `Still needed: ${fmt(remaining)} · Est. years to FIRE: ${yearsToFIRE === Infinity ? '∞' : yearsToFIRE + ' yrs'} (simplified)`;
-      document.getElementById('fire-result').classList.add('visible');
-    }
-
-    function calcDCA() {
-      const total = parseFloat(document.getElementById('d-total').value) || 0;
-      const rate = (parseFloat(document.getElementById('d-rate').value) || 0) / 100;
-      const months = parseFloat(document.getElementById('d-months').value) || 12;
-      const years = parseFloat(document.getElementById('d-years').value) || 20;
-      const n = years;
-
-      // Lump sum: invest all now
-      const lumpSum = total * Math.pow(1 + rate, n);
-      // DCA: invest total/months each month for 'months' months, then hold
-      const monthly = total / months;
-      const mr = rate / 12;
-      let dcaBalance = 0;
-      const totalMonths = n * 12;
-      for (let i = 0; i < totalMonths; i++) {
-        if (i < months) dcaBalance += monthly;
-        dcaBalance *= (1 + mr);
-      }
-
-      const diff = lumpSum - dcaBalance;
-      document.getElementById('d-result-lump').textContent = fmt(lumpSum);
-      document.getElementById('d-result-sub').textContent =
-        `DCA result: ${fmt(dcaBalance)} · Lump sum advantage: ${fmt(Math.abs(diff))} ${diff > 0 ? '(lump sum wins)' : '(DCA wins)'}`;
-      document.getElementById('dca-result').classList.add('visible');
-    }
-
-    // Auto-scroll to anchor
-    if (window.location.hash) {
-      setTimeout(() => {
-        const el = document.querySelector(window.location.hash);
-        if (el) el.scrollIntoView({ behavior: 'smooth', block: 'start' });
-      }, 300);
-    }
-  </script>
 </body>
 </html>
