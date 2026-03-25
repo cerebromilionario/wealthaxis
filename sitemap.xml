@@ -14,6 +14,16 @@
   <url><loc>https://wealthaxis.netlify.app/tools/inflation-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://wealthaxis.netlify.app/tools/budget-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://wealthaxis.netlify.app/tools/retirement-withdrawal-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/dividend-yield-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/stock-average-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/position-size-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/capital-gains-tax-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/asset-allocation-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/emergency-fund-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/portfolio-rebalancing-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/bond-yield-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/rental-property-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
+  <url><loc>https://wealthaxis.netlify.app/tools/safe-withdrawal-rate-calculator.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <!-- Blog articles -->
   <url><loc>https://wealthaxis.netlify.app/blog/compound-interest-guide.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
   <url><loc>https://wealthaxis.netlify.app/blog/etf-vs-mutual-funds.html</loc><priority>0.8</priority><changefreq>monthly</changefreq></url>
