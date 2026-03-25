@@ -1,0 +1,150 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8"/>
+  <meta name="viewport" content="width=device-width, initial-scale=1.0"/>
+  <title>Options Trading for Beginners: How Calls, Puts, and Covered Calls Actually Work | WealthAxis</title>
+  <meta name="description" content="A clear, honest guide to options trading basics: call options, put options, covered calls, protective puts, the Greeks, and how sophisticated investors use options to generate income and manage risk."/>
+  <meta name="keywords" content="options trading basics, call options explained, put options, covered calls, stock options, options Greeks, theta decay, options income strategy"/>
+  <link rel="canonical" href="https://wealthaxis.netlify.app/blog/options-trading-basics.html"/>
+  <meta property="og:title" content="Options Trading for Beginners: How Calls, Puts, and Covered Calls Actually Work"/>
+  <meta property="og:description" content="A clear, honest guide to options trading basics: call options, put options, covered calls, protective puts, the Greeks, and how sophisticated investors use options to generate income and manage risk."/>
+  <meta property="og:type" content="article"/>
+  <meta name="google-adsense-account" content="ca-pub-4613426749830025">
+  <script async src="https://pagead2.googlesyndication.com/pagead/js/adsbygoogle.js?client=ca-pub-4613426749830025" crossorigin="anonymous"></script>
+  <link rel="preconnect" href="https://fonts.googleapis.com">
+  <link href="https://fonts.googleapis.com/css2?family=Playfair+Display:wght@700;900&family=DM+Sans:wght@300;400;500;600&family=DM+Mono:wght@400;500&display=swap" rel="stylesheet">
+  <link rel="stylesheet" href="../css/style.css"/>
+  <script type="application/ld+json">{
+    "@context": "https://schema.org",
+    "@type": "Article",
+    "headline": "Options Trading for Beginners: How Calls, Puts, and Covered Calls Actually Work",
+    "description": "A clear, honest guide to options trading basics: call options, put options, covered calls, protective puts, the Greeks, and how sophisticated investors use options to generate income and manage risk.",
+    "datePublished": "March 10, 2026",
+    "dateModified": "March 10, 2026",
+    "author": {"@type": "Organization", "name": "WealthAxis"},
+    "publisher": {"@type": "Organization", "name": "WealthAxis"},
+    "mainEntityOfPage": {"@type": "WebPage", "@id": "https://wealthaxis.netlify.app/blog/options-trading-basics.html"}
+  }</script>
+</head>
+<body>
+  <nav class="nav" id="nav">
+    <div class="nav-inner">
+      <a href="/" class="logo">Wealth<span>Axis</span></a>
+      <ul class="nav-links">
+        <li><a href="/blog/index.html" style="color:var(--gold)">Blog</a></li>
+        <li><a href="/tools/index.html">Tools</a></li>
+        <li><a href="/#newsletter" class="nav-cta">Free Newsletter</a></li>
+      </ul>
+      <button class="hamburger" id="hamburger"><span></span><span></span><span></span></button>
+    </div>
+    <div class="nav-mobile" id="nav-mobile"><a href="/blog/index.html">Blog</a><a href="/tools/index.html">Tools</a></div>
+  </nav>
+  <div class="ad-slot ad-slot--horizontal" style="margin-top:64px"><span class="ad-label">Advertisement</span></div>
+  <div class="article-page-inner" style="padding-top:40px">
+    <article class="article-main">
+      <div class="article-header">
+        <span class="article-category">Stocks</span>
+        <h1>Options Trading for Beginners: How Calls, Puts, and Covered Calls Actually Work</h1>
+        <div class="article-meta">
+          <span class="article-date">March 10, 2026</span>
+          <span class="article-read">15 min read</span>
+        </div>
+      </div>
+      <div class="article-content">
+
+        <p>Options are simultaneously the most misused and most misunderstood financial instruments available to retail investors. Used recklessly, they're a fast path to losing your entire investment. Used intelligently — specifically, used in ways that reduce risk rather than increase it — options are legitimate tools for income generation, downside protection, and portfolio management.</p>
+        <p>This guide covers options mechanics clearly and honestly: what they are, how they're priced, and specifically how conservative investors use them to generate consistent income without taking outsized risk.</p>
+
+        <div class="highlight-box"><p><strong>Honest assessment upfront:</strong> For most long-term investors, options add complexity and are unnecessary. A portfolio of index funds will outperform most options strategies after tax and friction costs over long periods. The value of understanding options is defensive — knowing enough to avoid being on the wrong side of a bad trade — and selective: covered calls on long-term holdings are one of the few options strategies with a genuine, provable risk-adjusted advantage for individual investors.</p></div>
+
+        <h2>The Fundamental Concept: The Right Without the Obligation</h2>
+        <p>An option contract gives the buyer the <em>right</em>, but not the obligation, to buy or sell 100 shares of an underlying stock at a specified price (the strike price) before or on a specific date (the expiration date). The buyer pays a premium for this right. The seller receives the premium and takes on the obligation to fulfill the contract if the buyer exercises their right.</p>
+        <p>This asymmetry — right vs. obligation — is the core of options. As a buyer, your maximum loss is the premium paid. As a seller (writer), your maximum gain is the premium received, but your potential obligation can be large.</p>
+        <p>Options exist on individual stocks, ETFs, indices, and commodities. Standard equity options represent 100 shares of the underlying. One AAPL option contract covering 100 shares at a $185 strike represents a position on $18,500 worth of Apple stock.</p>
+
+        <h2>Call Options: Betting on (or Protecting Against) Price Increases</h2>
+        <p>A call option gives the buyer the right to <em>buy</em> 100 shares of the underlying at the strike price before expiration.</p>
+        <p><strong>Call Buyer:</strong> You pay a premium for the right to buy at a fixed price. You profit if the stock rises above the strike plus premium paid. Your maximum loss is the premium.</p>
+        <p>Example: Apple trades at $180. You buy a call option with a $185 strike expiring in 60 days for $5 premium ($500 total for 100 shares). If Apple rises to $200, you can buy 100 shares at $185 and immediately sell at $200 — profit of $15/share minus $5 premium = $10/share = $1,000. If Apple stays below $185 at expiration, the option expires worthless and you lose your $500 premium.</p>
+        <p><strong>Call Seller (Writer):</strong> You receive the premium upfront in exchange for the obligation to sell shares at the strike if the buyer exercises. Unlimited downside risk if writing "naked" calls (without owning the shares). This is why covered calls (where you own the shares) is the safe version.</p>
+        <p>Why buy calls instead of the stock? Leverage. The $500 call gives you exposure to a $18,000 position. If Apple rises 10%, the stock gains $18 — but the call might gain $800-$1,000 (160-200% return). The leverage cuts both ways: if Apple doesn't move or falls, the call expires worthless while the stock merely declines a smaller percentage.</p>
+
+        <h2>Put Options: Insurance Against Declining Prices</h2>
+        <p>A put option gives the buyer the right to <em>sell</em> 100 shares at the strike price before expiration.</p>
+        <p><strong>Put Buyer:</strong> You pay a premium for the right to sell at a fixed price — effectively buying insurance against a price decline. Profit if the stock falls below strike minus premium.</p>
+        <p>Example: You own 100 shares of Tesla at $250 and are worried about a near-term drop. You buy a put with a $240 strike for $8 ($800 total). If Tesla falls to $200, you can sell your shares at $240 (your insured price) instead of the market's $200 — saving $40/share, or $4,000, minus the $800 premium = $3,200 in saved losses. If Tesla rises, you simply let the put expire and keep your stock's gains minus the $800 "insurance premium."</p>
+        <p>This is a legitimate, professional risk management technique — especially valuable before earnings releases, economic events, or for positions that represent concentrated wealth.</p>
+        <p><strong>Put Seller:</strong> Receiving premium in exchange for the obligation to buy shares at the strike if they decline. Used by investors willing to buy a stock at a lower price as a strategy (cash-secured puts).</p>
+
+        <h2>The Greeks: Understanding What Moves Option Prices</h2>
+        <p>Options prices respond to multiple variables. The "Greeks" quantify each sensitivity:</p>
+        <p><strong>Delta (Δ)</strong> — How much the option price moves for each $1 move in the underlying stock. A call with 0.50 delta gains ~$0.50 in value for each $1 the stock rises. Delta ranges from 0 to 1.0 for calls, -1.0 to 0 for puts. At-the-money options (strike = current price) typically have ~0.50 delta. Deep in-the-money options have delta approaching 1.0.</p>
+        <p><strong>Theta (Θ)</strong> — Time decay. The daily loss in option value purely from the passage of time, holding everything else constant. Options are wasting assets — their time value erodes every day, accelerating as expiration approaches. A 60-day option might decay $0.10/day; the same option with 7 days left might decay $0.50/day. Sellers benefit from theta; buyers fight against it. This is why selling options (covered calls, cash-secured puts) is often called "selling time."</p>
+        <p><strong>Vega (ν)</strong> — Sensitivity to changes in implied volatility. Higher implied volatility means higher option prices (more uncertainty = more potential for large moves = higher option value). During market turmoil, IV spikes and option premiums expand. After volatility subsides, IV contracts and premiums collapse. Option sellers benefit when IV contracts after a spike; buyers benefit when buying during low IV periods.</p>
+        <p><strong>Gamma (Γ)</strong> — The rate of change of delta. High gamma means delta changes rapidly with stock movement. Options near expiration and at-the-money have high gamma — they can move dramatically in value as the stock moves toward or away from the strike.</p>
+
+        <h2>Covered Calls: The Conservative Income Strategy</h2>
+        <p>The covered call is the most widely used options strategy among conservative investors — and for good reason. It generates consistent income with defined risk parameters.</p>
+        <p><strong>How it works:</strong> You own at least 100 shares of a stock (or ETF). You sell call options against those shares at a strike price above the current price. You receive the premium immediately. If the stock stays below the strike at expiration, the options expire worthless and you keep the premium — then sell again next month. If the stock rises above the strike, your shares are "called away" (you must sell them at the strike price) — but you keep the premium and sell at the strike, which is typically above your purchase price.</p>
+        <p>Example: You own 100 shares of Microsoft (MSFT) at $410/share. MSFT is trading at $415. You sell a 30-day call option with a $425 strike and collect $5.50 premium ($550 for 100 shares). Three possible outcomes:</p>
+        <ul>
+          <li><strong>MSFT stays below $425:</strong> Option expires worthless, you keep $550 premium. Repeat monthly. $550/month on a $41,500 position = 1.3% monthly yield, ~16% annualized income.</li>
+          <li><strong>MSFT rises above $425:</strong> Shares called away at $425. You earned $10/share in stock appreciation ($415→$425) + $5.50 premium = $15.50/share = $1,550 on 100 shares. Your upside is capped at $425, but the premium compensates for missed upside.</li>
+          <li><strong>MSFT falls:</strong> Option expires worthless, you keep the $550 premium. The premium partially offsets the stock decline — $550 in income reduces your loss by $5.50/share.</li>
+        </ul>
+        <p>Covered calls effectively lower your cost basis over time and generate income in flat or mildly rising markets. The tradeoff: you cap your upside. If MSFT rockets to $480, you miss $55/share of that gain. For long-term holders of stable positions, this tradeoff is often worthwhile.</p>
+
+        <h2>Cash-Secured Puts: Getting Paid to Wait for Stocks You Want</h2>
+        <p>A cash-secured put is selling a put option on a stock you'd like to own, while holding enough cash to buy the shares at the strike price if assigned.</p>
+        <p>Example: You want to buy Apple at $175 (currently trading at $185). You sell a put with a $175 strike expiring in 45 days and receive $3.50 premium ($350 for 100 shares). Two outcomes:</p>
+        <ul>
+          <li><strong>Apple stays above $175:</strong> Put expires worthless. You keep $350 and still don't own the shares — but you've been paid to wait. Sell another put next month.</li>
+          <li><strong>Apple falls below $175:</strong> You're assigned — you must buy 100 shares at $175. Effectively you bought Apple at $175 - $3.50 = $171.50 (your net cost after premium). If you genuinely wanted to own Apple at $175, this is excellent: you got it at an even better price.</li>
+        </ul>
+        <p>Combined with covered calls, cash-secured puts form what's called the "wheel strategy" — a systematic income-generation approach for patient investors in stocks they're comfortable owning.</p>
+
+        <h2>The Options Strategies to Avoid as a Beginner</h2>
+        <p>Several options strategies are genuinely dangerous and responsible for most retail trader losses:</p>
+        <ul>
+          <li><strong>Naked calls:</strong> Selling call options without owning the underlying shares. Unlimited potential loss if the stock rockets upward. Never do this as a beginner.</li>
+          <li><strong>Deep out-of-the-money calls/puts:</strong> "Lottery ticket" options with low probability of profit. The price movement needed to profit is often unrealistic. These expire worthless most of the time — occasionally you'll win big, but the expected value is negative.</li>
+          <li><strong>0DTE (zero days to expiration) options:</strong> Extremely high gamma, extremely fast time decay, extremely volatile. Essentially gambling. Not investing.</li>
+          <li><strong>Leveraged options on leveraged ETFs:</strong> Double-leveraged ETF + call option = leverage on leverage. These positions can go to zero in days from adverse moves.</li>
+          <li><strong>Buying options before earnings:</strong> Implied volatility typically spikes before earnings, inflating option premiums. Even if you correctly predict the direction of the move, the IV crush after earnings can cause your correctly-directional option to lose value.</li>
+        </ul>
+        <p>The simple rule: if you're using options to generate income from stocks you own or would be happy to own, you're on the right side of options. If you're using options to make leveraged directional bets on stocks you wouldn't otherwise own, you're speculating — and the odds are against you.</p>
+
+      </div>
+    </article>
+    <aside class="sidebar">
+      <div class="ad-slot" style="min-height:250px;border-radius:12px;border:1px solid var(--border)"><span class="ad-label">Advertisement</span></div>
+      <div class="sidebar-widget">
+        <h4>Related Articles</h4>
+        <ul><li><a href="how-to-analyze-stocks.html">How to Analyze Stocks</a></li><li><a href="stock-market-beginners-guide.html">Stock Market Beginner's Guide</a></li><li><a href="tax-loss-harvesting.html">Tax-Loss Harvesting Guide</a></li><li><a href="portfolio-diversification.html">Recession-Proof Portfolio</a></li></ul>
+      </div>
+      <div class="sidebar-widget">
+        <h4>Free Tools</h4>
+        <ul>
+          <li><a href="../tools/compound-interest-calculator.html">📈 Compound Interest Calculator</a></li>
+          <li><a href="../tools/roi-calculator.html">💰 ROI Calculator</a></li>
+          <li><a href="../tools/fire-number-calculator.html">🔥 FIRE Number Calculator</a></li>
+          <li><a href="../tools/retirement-withdrawal-calculator.html">🏖️ Retirement Withdrawal</a></li>
+        </ul>
+      </div>
+      <div class="ad-slot" style="min-height:250px;border-radius:12px;border:1px solid var(--border);margin-top:20px"><span class="ad-label">Advertisement</span></div>
+    </aside>
+  </div>
+  <div class="ad-slot ad-slot--horizontal" style="margin:0 24px 60px"><span class="ad-label">Advertisement</span></div>
+  <footer class="footer">
+    <div class="container">
+      <div class="footer-bottom">
+        <p>© 2026 WealthAxis. For informational purposes only. Not financial advice. | 
+        <a href="../disclaimer.html" style="color:var(--gold)">Disclaimer</a> · 
+        <a href="../privacy-policy.html" style="color:var(--gold)">Privacy Policy</a></p>
+      </div>
+    </div>
+  </footer>
+  <script src="../js/main.js"></script>
+</body>
+</html>
