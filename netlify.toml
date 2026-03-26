@@ -1,6 +1,11 @@
 [build]
   publish = "."
 
+# ── Form email notifications ──────────────────────────────
+# After deploying, go to: Netlify Dashboard → Site → Forms → each form → Settings
+# and enable "Email notification" to willianzacarias77@gmail.com
+# The forms work immediately after deploy; email alerts are configured in the UI.
+
 [[redirects]]
   from = "/blog"
   to = "/blog/index.html"
@@ -28,3 +33,4 @@
   for = "/js/*"
   [headers.values]
     Cache-Control = "public, max-age=31536000, immutable"
+

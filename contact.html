@@ -112,7 +112,14 @@
         <!-- RIGHT: Form -->
         <div class="contact-form-wrap">
           <h2>Send a Message</h2>
-          <form id="contact-form">
+          <form id="contact-form"
+                name="contact"
+                method="POST"
+                data-netlify="true"
+                data-netlify-honeypot="bot-field"
+                action="/thank-you.html">
+            <input type="hidden" name="form-name" value="contact"/>
+            <input type="hidden" name="bot-field" style="display:none"/>
             <div class="cf-group">
               <label>Your Name</label>
               <input type="text" name="name" placeholder="John Smith" required />
@@ -139,12 +146,6 @@
               <textarea name="message" placeholder="Tell us how we can help..." required></textarea>
             </div>
             <button type="submit" class="cf-submit">Send Message →</button>
-            <div class="cf-success" id="cf-success">
-              ✓ Message sent! We'll get back to you within 1–2 business days.
-            </div>
-            <div class="cf-success" id="cf-error" style="display:none;color:#ff7b7b;border-color:rgba(255,123,123,.35);background:rgba(255,123,123,.08)">
-              We couldn't send automatically. Please email us at willianzacarias77@gmail.com.
-            </div>
           </form>
         </div>
 

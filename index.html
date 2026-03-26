@@ -65,33 +65,72 @@
       </div>
     </div>
     <div class="hero-visual">
-      <div class="chart-card">
-        <div class="chart-header">
-          <span class="chart-label">S&P 500 (SPX) — Live</span>
-          <span class="chart-badge up" id="market-live-badge">LIVE</span>
+      <div class="chart-card" style="padding:0;overflow:hidden;width:340px;background:var(--surface);">
+        <div class="chart-header" style="padding:16px 20px 12px;">
+          <span class="chart-label">Markets — Live Prices</span>
+          <span class="chart-badge up">LIVE</span>
         </div>
-        <div class="sparkline" id="spx-live-widget">
-          <div style="display:flex;flex-direction:column;gap:8px;height:100%;justify-content:center">
-            <span style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-mono);text-transform:uppercase">S&P 500 intraday</span>
-            <div id="spx-live-price" style="font-family:var(--font-display);font-size:1.8rem;font-weight:900;line-height:1">Loading...</div>
-            <div id="spx-live-change" style="font-size:.92rem;color:var(--text-muted)">Waiting for feed...</div>
-            <span id="spx-live-updated" style="font-size:.72rem;color:var(--text-dim);font-family:var(--font-mono)">Updated: --</span>
-          </div>
+        <!-- TradingView Market Overview Widget -->
+        <div class="tradingview-widget-container" style="height:320px;">
+          <div class="tradingview-widget-container__widget" style="height:100%"></div>
+          <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-market-overview.js" async>
+          {
+            "colorTheme": "dark",
+            "dateRange": "1D",
+            "showChart": true,
+            "locale": "en",
+            "largeChartUrl": "",
+            "isTransparent": true,
+            "showSymbolLogo": false,
+            "showFloatingTooltip": false,
+            "width": "100%",
+            "height": "320",
+            "plotLineColorGrowing": "#c9a84c",
+            "plotLineColorFalling": "#f75f5f",
+            "gridLineColor": "rgba(255,255,255,0.05)",
+            "scaleFontColor": "rgba(255,255,255,0.4)",
+            "belowLineFillColorGrowing": "rgba(201,168,76,0.08)",
+            "belowLineFillColorFalling": "rgba(247,95,95,0.08)",
+            "belowLineFillColorGrowingBottom": "transparent",
+            "belowLineFillColorFallingBottom": "transparent",
+            "symbolActiveColor": "rgba(201,168,76,0.12)",
+            "tabs": [
+              {
+                "title": "Indices",
+                "symbols": [
+                  {"s": "FOREXCOM:SPXUSD", "d": "S&P 500"},
+                  {"s": "FOREXCOM:NSXUSD", "d": "Nasdaq 100"},
+                  {"s": "FOREXCOM:DJI", "d": "Dow Jones"},
+                  {"s": "INDEX:NKY", "d": "Nikkei 225"},
+                  {"s": "INDEX:UKX", "d": "FTSE 100"}
+                ],
+                "originalTitle": "Indices"
+              },
+              {
+                "title": "Stocks",
+                "symbols": [
+                  {"s": "NASDAQ:AAPL", "d": "Apple"},
+                  {"s": "NASDAQ:MSFT", "d": "Microsoft"},
+                  {"s": "NASDAQ:NVDA", "d": "NVIDIA"},
+                  {"s": "NASDAQ:TSLA", "d": "Tesla"},
+                  {"s": "NASDAQ:GOOGL", "d": "Alphabet"}
+                ],
+                "originalTitle": "Stocks"
+              },
+              {
+                "title": "Crypto",
+                "symbols": [
+                  {"s": "BITSTAMP:BTCUSD", "d": "Bitcoin"},
+                  {"s": "BITSTAMP:ETHUSD", "d": "Ethereum"}
+                ],
+                "originalTitle": "Crypto"
+              }
+            ]
+          }
+          </script>
         </div>
-        <div class="chart-tickers">
-          <div class="ticker"><span class="t-sym">AAPL</span><span class="t-val" id="ticker-aapl">Loading...</span></div>
-          <div class="ticker"><span class="t-sym">MSFT</span><span class="t-val" id="ticker-msft">Loading...</span></div>
-          <div class="ticker"><span class="t-sym">NVDA</span><span class="t-val" id="ticker-nvda">Loading...</span></div>
-          <div class="ticker"><span class="t-sym">TSLA</span><span class="t-val" id="ticker-tsla">Loading...</span></div>
-        </div>
-        <div class="world-markets">
-          <span class="world-markets-label">Global Index Snapshot</span>
-          <div class="world-grid">
-            <div class="ticker"><span class="t-sym">US500</span><span class="t-val" id="ticker-us500">Loading...</span></div>
-            <div class="ticker"><span class="t-sym">NASDAQ</span><span class="t-val" id="ticker-nasdaq">Loading...</span></div>
-            <div class="ticker"><span class="t-sym">UK100</span><span class="t-val" id="ticker-uk100">Loading...</span></div>
-            <div class="ticker"><span class="t-sym">JP225</span><span class="t-val" id="ticker-jp225">Loading...</span></div>
-          </div>
+        <div style="padding:8px 16px;border-top:1px solid var(--border)">
+          <p style="font-size:.65rem;color:var(--text-dim);font-family:var(--font-mono);margin:0">Powered by TradingView · Prices delayed 15 min</p>
         </div>
       </div>
     </div>
@@ -269,7 +308,14 @@
           <h2>Get the weekly financial edge</h2>
           <p>Market insights, new articles, and exclusive tool updates — straight to your inbox. Free, forever.</p>
         </div>
-        <form class="newsletter-form" id="newsletter-form">
+        <form class="newsletter-form" id="newsletter-form"
+              name="newsletter"
+              method="POST"
+              data-netlify="true"
+              data-netlify-honeypot="bot-field"
+              action="/thank-you.html">
+          <input type="hidden" name="form-name" value="newsletter"/>
+          <input type="hidden" name="bot-field" style="display:none"/>
           <input type="email" name="email" placeholder="your@email.com" required />
           <button type="submit">Subscribe Free</button>
         </form>
