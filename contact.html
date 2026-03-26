@@ -115,15 +115,15 @@
           <form id="contact-form">
             <div class="cf-group">
               <label>Your Name</label>
-              <input type="text" placeholder="John Smith" required />
+              <input type="text" name="name" placeholder="John Smith" required />
             </div>
             <div class="cf-group">
               <label>Email Address</label>
-              <input type="email" placeholder="you@email.com" required />
+              <input type="email" name="email" placeholder="you@email.com" required />
             </div>
             <div class="cf-group">
               <label>Subject</label>
-              <select>
+              <select name="subject">
                 <option value="">Select a topic...</option>
                 <option>General Question</option>
                 <option>Content Feedback</option>
@@ -136,11 +136,14 @@
             </div>
             <div class="cf-group">
               <label>Message</label>
-              <textarea placeholder="Tell us how we can help..."></textarea>
+              <textarea name="message" placeholder="Tell us how we can help..." required></textarea>
             </div>
             <button type="submit" class="cf-submit">Send Message →</button>
             <div class="cf-success" id="cf-success">
               ✓ Message sent! We'll get back to you within 1–2 business days.
+            </div>
+            <div class="cf-success" id="cf-error" style="display:none;color:#ff7b7b;border-color:rgba(255,123,123,.35);background:rgba(255,123,123,.08)">
+              We couldn't send automatically. Please email us at willianzacarias77@gmail.com.
             </div>
           </form>
         </div>
@@ -208,17 +211,5 @@
   </footer>
 
   <script src="js/main.js"></script>
-  <script>
-    document.getElementById('contact-form').addEventListener('submit', function(e) {
-      e.preventDefault();
-      const btn = this.querySelector('.cf-submit');
-      btn.textContent = 'Sending...';
-      btn.disabled = true;
-      setTimeout(() => {
-        btn.style.display = 'none';
-        document.getElementById('cf-success').style.display = 'block';
-      }, 1000);
-    });
-  </script>
 </body>
 </html>
