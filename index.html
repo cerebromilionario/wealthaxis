@@ -67,24 +67,44 @@
     <div class="hero-visual">
       <div class="chart-card">
         <div class="chart-header">
-          <span class="chart-label">S&P 500 – YTD Performance</span>
-          <span class="chart-badge up">+12.4%</span>
+          <span class="chart-label">S&P 500 (SPX) — Live</span>
+          <span class="chart-badge up" id="market-live-badge">LIVE</span>
         </div>
-        <svg class="sparkline" viewBox="0 0 300 100" preserveAspectRatio="none">
-          <defs>
-            <linearGradient id="grad" x1="0%" y1="0%" x2="0%" y2="100%">
-              <stop offset="0%" style="stop-color:#c9a84c;stop-opacity:0.3" />
-              <stop offset="100%" style="stop-color:#c9a84c;stop-opacity:0" />
-            </linearGradient>
-          </defs>
-          <path d="M0,80 L30,70 L60,75 L90,55 L120,60 L150,40 L180,45 L210,30 L240,35 L270,20 L300,15" fill="none" stroke="#c9a84c" stroke-width="2.5"/>
-          <path d="M0,80 L30,70 L60,75 L90,55 L120,60 L150,40 L180,45 L210,30 L240,35 L270,20 L300,15 L300,100 L0,100 Z" fill="url(#grad)"/>
-        </svg>
+        <div class="sparkline" id="spx-live-widget">
+          <div class="tradingview-widget-container">
+            <div class="tradingview-widget-container__widget"></div>
+            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
+            {
+              "symbol": "SP:SPX",
+              "width": "100%",
+              "height": "100%",
+              "locale": "en",
+              "dateRange": "12M",
+              "colorTheme": "dark",
+              "trendLineColor": "#c9a84c",
+              "underLineColor": "rgba(201, 168, 76, 0.18)",
+              "underLineBottomColor": "rgba(201, 168, 76, 0.02)",
+              "isTransparent": true,
+              "autosize": true,
+              "largeChartUrl": ""
+            }
+            </script>
+          </div>
+        </div>
         <div class="chart-tickers">
-          <div class="ticker"><span class="t-sym">AAPL</span><span class="t-val up">+1.2%</span></div>
-          <div class="ticker"><span class="t-sym">MSFT</span><span class="t-val up">+0.8%</span></div>
-          <div class="ticker"><span class="t-sym">NVDA</span><span class="t-val up">+3.1%</span></div>
-          <div class="ticker"><span class="t-sym">TSLA</span><span class="t-val down">−0.4%</span></div>
+          <div class="ticker"><span class="t-sym">AAPL</span><span class="t-val" id="ticker-aapl">Loading...</span></div>
+          <div class="ticker"><span class="t-sym">MSFT</span><span class="t-val" id="ticker-msft">Loading...</span></div>
+          <div class="ticker"><span class="t-sym">NVDA</span><span class="t-val" id="ticker-nvda">Loading...</span></div>
+          <div class="ticker"><span class="t-sym">TSLA</span><span class="t-val" id="ticker-tsla">Loading...</span></div>
+        </div>
+        <div class="world-markets">
+          <span class="world-markets-label">Global Index Snapshot</span>
+          <div class="world-grid">
+            <div class="ticker"><span class="t-sym">US500</span><span class="t-val" id="ticker-us500">Loading...</span></div>
+            <div class="ticker"><span class="t-sym">NASDAQ</span><span class="t-val" id="ticker-nasdaq">Loading...</span></div>
+            <div class="ticker"><span class="t-sym">UK100</span><span class="t-val" id="ticker-uk100">Loading...</span></div>
+            <div class="ticker"><span class="t-sym">JP225</span><span class="t-val" id="ticker-jp225">Loading...</span></div>
+          </div>
         </div>
       </div>
     </div>
@@ -218,36 +238,37 @@
   <section class="section" id="categories">
     <div class="container">
       <h2 class="section-title">Explore by Topic</h2>
+      <p class="section-subtitle" id="topics-total">Contagem sincronizada com os artigos publicados no blog.</p>
       <div class="categories-grid">
-        <a href="blog/index.html?cat=stocks" class="cat-card">
+        <a href="blog/index.html" class="cat-card" data-topics="Investing Basics">
           <span class="cat-icon">📈</span>
-          <strong>Stocks & Equities</strong>
-          <span>32 articles</span>
+          <strong>Investing Basics</strong>
+          <span data-topic-count>-- artigos</span>
         </a>
-        <a href="blog/index.html?cat=etf" class="cat-card">
-          <span class="cat-icon">🧺</span>
-          <strong>ETFs & Index Funds</strong>
-          <span>18 articles</span>
+        <a href="blog/index.html" class="cat-card" data-topics="Stocks">
+          <span class="cat-icon">🏢</span>
+          <strong>Stocks</strong>
+          <span data-topic-count>-- artigos</span>
         </a>
-        <a href="blog/index.html?cat=crypto" class="cat-card">
-          <span class="cat-icon">₿</span>
-          <strong>Crypto & Digital Assets</strong>
-          <span>24 articles</span>
-        </a>
-        <a href="blog/index.html?cat=realestate" class="cat-card">
-          <span class="cat-icon">🏠</span>
-          <strong>Real Estate</strong>
-          <span>14 articles</span>
-        </a>
-        <a href="blog/index.html?cat=retirement" class="cat-card">
+        <a href="blog/index.html" class="cat-card" data-topics="Retirement,Retirement Planning">
           <span class="cat-icon">🎯</span>
-          <strong>Retirement Planning</strong>
-          <span>21 articles</span>
+          <strong>Retirement</strong>
+          <span data-topic-count>-- artigos</span>
         </a>
-        <a href="blog/index.html?cat=tax" class="cat-card">
+        <a href="blog/index.html" class="cat-card" data-topics="Portfolio,Portfolio Strategy">
+          <span class="cat-icon">🧭</span>
+          <strong>Portfolio Strategy</strong>
+          <span data-topic-count>-- artigos</span>
+        </a>
+        <a href="blog/index.html" class="cat-card" data-topics="Personal Finance,Career & Finance,Cash Management,Passive Income">
+          <span class="cat-icon">💼</span>
+          <strong>Personal Finance</strong>
+          <span data-topic-count>-- artigos</span>
+        </a>
+        <a href="blog/index.html" class="cat-card" data-topics="Tax,Tax Strategy">
           <span class="cat-icon">📋</span>
-          <strong>Tax & Legal</strong>
-          <span>11 articles</span>
+          <strong>Tax</strong>
+          <span data-topic-count>-- artigos</span>
         </a>
       </div>
     </div>

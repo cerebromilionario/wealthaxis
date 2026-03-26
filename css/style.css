@@ -275,7 +275,9 @@ img { max-width: 100%; display: block; }
 .chart-badge { font-size: 0.8rem; font-weight: 600; font-family: var(--font-mono); padding: 3px 8px; border-radius: 100px; }
 .chart-badge.up { background: rgba(62,207,142,0.15); color: var(--green); }
 
-.sparkline { width: 100%; height: 80px; display: block; margin-bottom: 16px; }
+.sparkline { width: 100%; height: 140px; display: block; margin-bottom: 16px; overflow: hidden; border-radius: 10px; }
+.sparkline .tradingview-widget-container,
+.sparkline .tradingview-widget-container__widget { width: 100%; height: 100%; }
 
 .chart-tickers {
   display: grid;
@@ -283,6 +285,23 @@ img { max-width: 100%; display: block; }
   gap: 8px;
   border-top: 1px solid var(--border);
   padding-top: 12px;
+}
+.world-markets {
+  margin-top: 12px;
+  padding-top: 12px;
+  border-top: 1px solid var(--border);
+}
+.world-markets-label {
+  display: block;
+  margin-bottom: 8px;
+  font-size: 0.72rem;
+  color: var(--text-muted);
+  font-family: var(--font-mono);
+}
+.world-grid {
+  display: grid;
+  grid-template-columns: 1fr 1fr;
+  gap: 8px;
 }
 .ticker { display: flex; justify-content: space-between; align-items: center; }
 .t-sym { font-family: var(--font-mono); font-size: 0.75rem; font-weight: 500; color: var(--text); }
@@ -325,6 +344,12 @@ img { max-width: 100%; display: block; }
   font-weight: 700;
   letter-spacing: -0.5px;
   line-height: 1.2;
+}
+.section-subtitle {
+  margin-top: 8px;
+  margin-bottom: 28px;
+  color: var(--text-muted);
+  font-size: 0.95rem;
 }
 .section-tag {
   display: inline-block;
