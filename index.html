@@ -71,24 +71,11 @@
           <span class="chart-badge up" id="market-live-badge">LIVE</span>
         </div>
         <div class="sparkline" id="spx-live-widget">
-          <div class="tradingview-widget-container">
-            <div class="tradingview-widget-container__widget"></div>
-            <script type="text/javascript" src="https://s3.tradingview.com/external-embedding/embed-widget-mini-symbol-overview.js" async>
-            {
-              "symbol": "SP:SPX",
-              "width": "100%",
-              "height": "100%",
-              "locale": "en",
-              "dateRange": "12M",
-              "colorTheme": "dark",
-              "trendLineColor": "#c9a84c",
-              "underLineColor": "rgba(201, 168, 76, 0.18)",
-              "underLineBottomColor": "rgba(201, 168, 76, 0.02)",
-              "isTransparent": true,
-              "autosize": true,
-              "largeChartUrl": ""
-            }
-            </script>
+          <div style="display:flex;flex-direction:column;gap:8px;height:100%;justify-content:center">
+            <span style="font-size:.72rem;color:var(--text-muted);font-family:var(--font-mono);text-transform:uppercase">S&P 500 intraday</span>
+            <div id="spx-live-price" style="font-family:var(--font-display);font-size:1.8rem;font-weight:900;line-height:1">Loading...</div>
+            <div id="spx-live-change" style="font-size:.92rem;color:var(--text-muted)">Waiting for feed...</div>
+            <span id="spx-live-updated" style="font-size:.72rem;color:var(--text-dim);font-family:var(--font-mono)">Updated: --</span>
           </div>
         </div>
         <div class="chart-tickers">
@@ -283,9 +270,10 @@
           <p>Market insights, new articles, and exclusive tool updates — straight to your inbox. Free, forever.</p>
         </div>
         <form class="newsletter-form" id="newsletter-form">
-          <input type="email" placeholder="your@email.com" required />
+          <input type="email" name="email" placeholder="your@email.com" required />
           <button type="submit">Subscribe Free</button>
         </form>
+        <p class="newsletter-note" id="newsletter-status" style="display:none"></p>
         <p class="newsletter-note">No spam. Unsubscribe anytime. 12,000+ subscribers.</p>
       </div>
     </div>
