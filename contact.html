@@ -109,7 +109,45 @@
           </div>
         </div>
 
-        <!-- RIGHT: Form -->\n        <div class="contact-form-wrap">\n          <h2>Send a Message</h2>\n\n          <!-- FormSubmit.co — direct POST, zero JS needed, emails willianzacarias77@gmail.com -->\n          <form id="contact-form"\n                action="https://formsubmit.co/willianzacarias77@gmail.com"\n                method="POST">\n\n            <!-- FormSubmit config -->\n            <input type="hidden" name="_subject" value="WealthAxis — New Contact Message"/>\n            <input type="hidden" name="_next" value="https://wealthaxis.netlify.app/thank-you.html"/>\n            <input type="hidden" name="_captcha" value="false"/>\n            <input type="hidden" name="_template" value="table"/>\n            <!-- Honeypot anti-spam -->\n            <input type="text" name="_honey" style="display:none"/>\n\n            <div class="cf-group">\n              <label>Your Name</label>\n              <input type="text" name="name" placeholder="John Smith" required />\n            </div>\n            <div class="cf-group">\n              <label>Email Address</label>\n              <input type="email" name="email" placeholder="you@email.com" required />\n            </div>\n            <div class="cf-group">\n              <label>Subject</label>\n              <select name="subject">\n                <option value="">Select a topic...</option>\n                <option>General Question</option>\n                <option>Content Feedback</option>\n                <option>Tool or Calculator Issue</option>\n                <option>Partnership / Sponsorship</option>\n                <option>Press / Media</option>\n                <option>Privacy / Data Request</option>\n                <option>Other</option>\n              </select>\n            </div>\n            <div class="cf-group">\n              <label>Message</label>\n              <textarea name="message" placeholder="Tell us how we can help..." required></textarea>\n            </div>\n            <button type="submit" class="cf-submit">Send Message →</button>\n          </form>\n        </div>
+        <!-- RIGHT: Form -->
+        <div class="contact-form-wrap">
+          <h2>Send a Message</h2>
+          <form id="contact-form"
+                action="https://formsubmit.co/willianzacarias77@gmail.com"
+                method="POST">
+            <input type="hidden" name="_subject" value="WealthAxis — New Contact Message"/>
+            <input type="hidden" name="_next" value="https://wealthaxis.netlify.app/thank-you.html"/>
+            <input type="hidden" name="_captcha" value="false"/>
+            <input type="hidden" name="_template" value="table"/>
+            <input type="text" name="_honey" style="display:none"/>
+            <div class="cf-group">
+              <label>Your Name</label>
+              <input type="text" name="name" placeholder="John Smith" required />
+            </div>
+            <div class="cf-group">
+              <label>Email Address</label>
+              <input type="email" name="email" placeholder="you@email.com" required />
+            </div>
+            <div class="cf-group">
+              <label>Subject</label>
+              <select name="subject">
+                <option value="">Select a topic...</option>
+                <option>General Question</option>
+                <option>Content Feedback</option>
+                <option>Tool or Calculator Issue</option>
+                <option>Partnership / Sponsorship</option>
+                <option>Press / Media</option>
+                <option>Privacy / Data Request</option>
+                <option>Other</option>
+              </select>
+            </div>
+            <div class="cf-group">
+              <label>Message</label>
+              <textarea name="message" placeholder="Tell us how we can help..." required></textarea>
+            </div>
+            <button type="submit" class="cf-submit">Send Message →</button>
+          </form>
+        </div>
 
       </div>
 
