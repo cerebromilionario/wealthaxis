@@ -34,27 +34,21 @@ document.querySelectorAll('.article-card, .tool-chip, .cat-card, .blog-article, 
   observer.observe(el);
 });
 
-// ── Newsletter form — loading state only ────────────────
-// Submission is handled natively by Netlify Forms (data-netlify="true").
-// Netlify captures the POST and emails willianzacarias77@gmail.com.
-// The page redirects to /thank-you.html automatically on success.
-const newsletterForm = document.getElementById('newsletter-form');
-if (newsletterForm) {
-  newsletterForm.addEventListener('submit', () => {
-    const btn = newsletterForm.querySelector('button[type="submit"]');
-    if (btn) { btn.textContent = 'Sending...'; btn.disabled = true; }
-  });
-}
+// ── Forms: loading state on submit ──────────────────────
+// Both newsletter and contact use FormSubmit.co (action="https://formsubmit.co/...")
+// FormSubmit handles the POST + redirect natively — no JS needed for that.
+// This JS only shows a "Sending..." state while the POST is in flight.
 
-// ── Contact form — loading state only ──────────────────
-// Same: Netlify Forms handles submission and emails willianzacarias77@gmail.com.
-const contactForm = document.getElementById('contact-form');
-if (contactForm) {
-  contactForm.addEventListener('submit', () => {
-    const btn = contactForm.querySelector('.cf-submit');
-    if (btn) { btn.textContent = 'Sending...'; btn.disabled = true; }
+document.querySelectorAll('#newsletter-form, #contact-form').forEach(form => {
+  form.addEventListener('submit', () => {
+    const btn = form.querySelector('button[type="submit"], .cf-submit');
+    if (btn) {
+      btn.textContent = 'Sending...';
+      btn.disabled = true;
+      btn.style.opacity = '0.7';
+    }
   });
-}
+});
 
 // ── Sync topic counts from blog index ──────────────────
 async function syncTopicCounts() {
