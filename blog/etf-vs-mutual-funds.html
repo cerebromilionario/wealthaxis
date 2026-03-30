@@ -58,6 +58,69 @@
         </ul>
 
         <h2>The Cost Comparison: Where Outcomes Are Really Decided</h2>
+<figure style="margin:32px 0;background:#16161c;border:1px solid #2a2a35;border-radius:12px;padding:24px 24px 16px;overflow-x:auto">
+<figcaption style="font-size:.72rem;color:#888899;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px">Fig. 1 — $100,000 at 8% gross return: final value by expense ratio after 30 years</figcaption>
+<svg viewBox="0 0 620 270" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:620px;display:block">
+  <!-- Axes -->
+  <line x1="60" y1="16" x2="60" y2="200" stroke="#2a2a35" stroke-width="1.5"/>
+  <line x1="60" y1="200" x2="590" y2="200" stroke="#2a2a35" stroke-width="1.5"/>
+  <!-- Grid -->
+  <line x1="60" y1="50"  x2="590" y2="50"  stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="60" y1="100" x2="590" y2="100" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="60" y1="150" x2="590" y2="150" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <!-- Y labels  — scale: $1,050K=y16 to $0=y200  → 184px/$1.05M → 1px~$5707 -->
+  <!-- $1,006K = y~27 / $987K y31 / $794K y64 / $680K y82 / $555K y103 -->
+  <text x="52" y="204" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$0</text>
+  <text x="52" y="154" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$500K</text>
+  <text x="52" y="104" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$750K</text>
+  <text x="52" y="54"  text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$950K</text>
+  <text x="52" y="20"  text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$1.05M</text>
+
+  <!-- Bars (horizontal layout, 5 expense ratios) -->
+  <!-- 0.03% → $1,006K  y = 200 - (1006/1050)*184 = 200-176 = 24 -->
+  <!-- 0.10% → $987K    y = 200 - (987/1050)*184  = 200-173 = 27 -->
+  <!-- 0.50% → $861K    y = 200 - (861/1050)*184  = 200-151 = 49 -->
+  <!-- 1.00% → $745K    y = 200 - (745/1050)*184  = 200-131 = 69 -->
+  <!-- 1.50% → $645K    y = 200 - (645/1050)*184  = 200-113 = 87 -->
+  <!-- 2.50% → $481K    y = 200 - (481/1050)*184  = 200-84  = 116 -->
+
+  <rect x="80"  y="24"  width="72" height="176" rx="4" fill="#3ecf8e" opacity="0.9"/>
+  <text x="116" y="20"  text-anchor="middle" fill="#3ecf8e" font-size="12" font-family="monospace" font-weight="bold">$1,006K</text>
+
+  <rect x="178" y="27"  width="72" height="173" rx="4" fill="#3ecf8e" opacity="0.7"/>
+  <text x="214" y="23"  text-anchor="middle" fill="#3ecf8e" font-size="12" font-family="monospace" font-weight="bold">$987K</text>
+
+  <rect x="276" y="49"  width="72" height="151" rx="4" fill="#c9a84c" opacity="0.8"/>
+  <text x="312" y="45"  text-anchor="middle" fill="#c9a84c" font-size="12" font-family="monospace" font-weight="bold">$861K</text>
+
+  <rect x="374" y="69"  width="72" height="131" rx="4" fill="#e8a020" opacity="0.85"/>
+  <text x="410" y="65"  text-anchor="middle" fill="#e8a020" font-size="12" font-family="monospace" font-weight="bold">$745K</text>
+
+  <rect x="472" y="87"  width="72" height="113" rx="4" fill="#f77a40" opacity="0.85"/>
+  <text x="508" y="83"  text-anchor="middle" fill="#f77a40" font-size="12" font-family="monospace" font-weight="bold">$645K</text>
+
+  <!-- X labels -->
+  <text x="116" y="215" text-anchor="middle" fill="#888899" font-size="11" font-family="monospace">0.03%</text>
+  <text x="116" y="227" text-anchor="middle" fill="#555566" font-size="10" font-family="monospace">Index ETF</text>
+  <text x="214" y="215" text-anchor="middle" fill="#888899" font-size="11" font-family="monospace">0.10%</text>
+  <text x="214" y="227" text-anchor="middle" fill="#555566" font-size="10" font-family="monospace">Index fund</text>
+  <text x="312" y="215" text-anchor="middle" fill="#888899" font-size="11" font-family="monospace">0.50%</text>
+  <text x="312" y="227" text-anchor="middle" fill="#555566" font-size="10" font-family="monospace">Low-cost active</text>
+  <text x="410" y="215" text-anchor="middle" fill="#888899" font-size="11" font-family="monospace">1.00%</text>
+  <text x="410" y="227" text-anchor="middle" fill="#555566" font-size="10" font-family="monospace">Avg active fund</text>
+  <text x="508" y="215" text-anchor="middle" fill="#888899" font-size="11" font-family="monospace">1.50%</text>
+  <text x="508" y="227" text-anchor="middle" fill="#555566" font-size="10" font-family="monospace">High-cost active</text>
+
+  <!-- Delta annotation -->
+  <line x1="116" y1="24" x2="116" y2="16" stroke="#3ecf8e" stroke-width="0.5"/>
+  <line x1="508" y1="87" x2="508" y2="16" stroke="#f77a40" stroke-width="0.5"/>
+  <line x1="116" y1="16" x2="508" y2="16" stroke="#555566" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="312" y="13" text-anchor="middle" fill="#f75f5f" font-size="11" font-family="monospace">$361K lost to fees alone</text>
+
+  <text x="334" y="250" text-anchor="middle" fill="#555566" font-size="10" font-family="monospace">$100,000 initial investment, 8% gross annual return, 30 years. No additional contributions.</text>
+</svg>
+</figure>
+
         <p>Fees are the single most predictable driver of long-term investment outcomes. Every dollar paid in expenses is a dollar that cannot compound. The mathematics are unforgiving over decades.</p>
         <p>The asset-weighted average expense ratio for actively managed U.S. equity mutual funds sits around <strong>0.66% per year</strong> according to ICI data. Passively managed index mutual funds average closer to <strong>0.05%</strong>. Popular index ETFs like VOO, IVV, and SCHB charge just <strong>0.03%–0.04%</strong>.</p>
         <p>Modeled on a $100,000 investment compounding at 8% annually before fees over 30 years:</p>

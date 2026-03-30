@@ -81,6 +81,83 @@
         <p>That last decade (year 30 to 40) added <em>more than the entire preceding 30 years</em>. This is the exponential nature of compounding — and why starting early is the single most impactful financial decision you can make.</p>
 
         <h2>The $500/Month Scenario: Step by Step</h2>
+<figure style="margin:32px 0;background:#16161c;border:1px solid #2a2a35;border-radius:12px;padding:24px 24px 16px;overflow-x:auto">
+<figcaption style="font-size:.72rem;color:#888899;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px">Fig. 1 — $500/month at 8% annual return: contributions vs. compound growth</figcaption>
+<svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:620px;display:block">
+  <!-- Axes -->
+  <line x1="64" y1="16" x2="64" y2="216" stroke="#2a2a35" stroke-width="1.5"/>
+  <line x1="64" y1="216" x2="604" y2="216" stroke="#2a2a35" stroke-width="1.5"/>
+  <!-- Y grid + labels  0 / 100K / 250K / 500K / 800K / 1.2M -->
+  <line x1="64" y1="180" x2="604" y2="180" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="64" y1="150" x2="604" y2="150" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="64" y1="108" x2="604" y2="108" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="64" y1="72" x2="604" y2="72" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <line x1="64" y1="36" x2="604" y2="36" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="56" y="220" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$0</text>
+  <text x="56" y="184" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$100K</text>
+  <text x="56" y="154" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$250K</text>
+  <text x="56" y="112" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$500K</text>
+  <text x="56" y="76" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$800K</text>
+  <text x="56" y="40" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$1.2M</text>
+
+  <!-- Scale helpers:
+       $1.2M = y16,  $0 = y216  → 200px = $1.2M  → 1px = $6000
+       Contributions $500/mo × 12 × n years
+       Year 10: contrib=$60K y206, total=$91.5K y201
+       Year 20: contrib=$120K y196, total=$294K y167
+       Year 30: contrib=$180K y186, total=$680K y103
+       Year 40: contrib=$240K y176, total=$1,491K y19  (cap at 1.2M=y16)
+  -->
+
+  <!-- Contributions area (gold) — bottom filled polygon -->
+  <polygon
+    points="64,216  171,206  278,196  385,186  492,176  599,170  599,216  492,216  385,216  278,216  171,216  64,216"
+    fill="#c9a84c" opacity="0.35"/>
+
+  <!-- Total balance area (green above gold) -->
+  <polygon
+    points="64,216  171,201  278,167  385,103  492,46  599,19  599,170  492,176  385,186  278,196  171,206  64,216"
+    fill="#3ecf8e" opacity="0.18"/>
+
+  <!-- Contribution line -->
+  <polyline points="64,216  171,206  278,196  385,186  492,176  599,170"
+    fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- Total balance line -->
+  <polyline points="64,216  171,201  278,167  385,103  492,46  599,19"
+    fill="none" stroke="#3ecf8e" stroke-width="2.5" stroke-linecap="round" stroke-linejoin="round"/>
+
+  <!-- End-point markers -->
+  <circle cx="599" cy="170" r="4" fill="#c9a84c"/>
+  <circle cx="599" cy="19"  r="5" fill="#3ecf8e"/>
+
+  <!-- End labels -->
+  <text x="603" y="174" fill="#c9a84c" font-size="11" font-family="monospace">$240K contributed</text>
+  <text x="603" y="15"  fill="#3ecf8e" font-size="11" font-family="monospace">$1.49M total</text>
+
+  <!-- Gap arrow showing compound growth -->
+  <line x1="596" y1="22" x2="596" y2="167" stroke="#555566" stroke-width="1" stroke-dasharray="3,3"/>
+  <text x="588" y="98" text-anchor="end" fill="#3ecf8e" font-size="11" font-family="monospace">+$1.25M</text>
+  <text x="588" y="111" text-anchor="end" fill="#555566" font-size="10" font-family="monospace">compound</text>
+  <text x="588" y="123" text-anchor="end" fill="#555566" font-size="10" font-family="monospace">growth</text>
+
+  <!-- X axis labels -->
+  <text x="64"  y="230" text-anchor="middle" fill="#888899" font-size="10" font-family="monospace">Year 0</text>
+  <text x="171" y="230" text-anchor="middle" fill="#888899" font-size="10" font-family="monospace">Year 10</text>
+  <text x="278" y="230" text-anchor="middle" fill="#888899" font-size="10" font-family="monospace">Year 20</text>
+  <text x="385" y="230" text-anchor="middle" fill="#888899" font-size="10" font-family="monospace">Year 30</text>
+  <text x="492" y="230" text-anchor="middle" fill="#888899" font-size="10" font-family="monospace">Year 35</text>
+  <text x="599" y="230" text-anchor="middle" fill="#888899" font-size="10" font-family="monospace">Year 40</text>
+
+  <!-- Legend -->
+  <rect x="64" y="248" width="12" height="10" rx="2" fill="#3ecf8e" opacity="0.7"/>
+  <text x="82" y="257" fill="#888899" font-size="11" font-family="monospace">Total portfolio value</text>
+  <rect x="260" y="248" width="12" height="10" rx="2" fill="#c9a84c" opacity="0.7"/>
+  <text x="278" y="257" fill="#888899" font-size="11" font-family="monospace">Total contributions ($500/mo)</text>
+  <text x="334" y="271" text-anchor="middle" fill="#555566" font-size="10" font-family="monospace">8% annual return, monthly compounding. Illustrative.</text>
+</svg>
+</figure>
+
         <p>Let's run the full math on a $500/month investment strategy at various ages and time horizons, assuming an 8% average annual return (historically achievable via index funds):</p>
 
         <ul>

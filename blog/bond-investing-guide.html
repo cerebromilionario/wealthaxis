@@ -68,6 +68,94 @@
         <p>The complication: bonds trade in a secondary market, and their prices change constantly based on current interest rates, credit quality, and time to maturity. You don't have to hold a bond to maturity — you can sell it. But the price you receive will depend on market conditions.</p>
 
         <h2>Why Bond Prices Move Inversely With Interest Rates</h2>
+<figure style="margin:32px 0;background:#16161c;border:1px solid #2a2a35;border-radius:12px;padding:24px 24px 16px;overflow-x:auto">
+<figcaption style="font-size:.72rem;color:#888899;font-family:'DM Mono',monospace;text-transform:uppercase;letter-spacing:.08em;margin-bottom:18px">Fig. 1 — Bond price vs. yield: the inverse relationship and duration impact</figcaption>
+<svg viewBox="0 0 620 280" xmlns="http://www.w3.org/2000/svg" style="width:100%;max-width:620px;display:block">
+  <!-- LEFT PANEL: Price/Yield curve -->
+  <!-- Axes -->
+  <line x1="50" y1="16" x2="50" y2="210" stroke="#2a2a35" stroke-width="1.5"/>
+  <line x1="50" y1="210" x2="295" y2="210" stroke="#2a2a35" stroke-width="1.5"/>
+  <!-- Labels -->
+  <text x="160" y="228" text-anchor="middle" fill="#888899" font-size="11" font-family="monospace">Yield →</text>
+  <text x="18" y="115" fill="#888899" font-size="11" font-family="monospace" transform="rotate(-90,18,115)">Price →</text>
+  <!-- Y ticks -->
+  <text x="44" y="210" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$700</text>
+  <text x="44" y="155" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$900</text>
+  <text x="44" y="105" text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$1,000</text>
+  <text x="44" y="60"  text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$1,100</text>
+  <text x="44" y="25"  text-anchor="end" fill="#888899" font-size="10" font-family="monospace">$1,300</text>
+  <!-- X ticks -->
+  <text x="55"  y="222" fill="#888899" font-size="10" font-family="monospace">1%</text>
+  <text x="115" y="222" fill="#888899" font-size="10" font-family="monospace">3%</text>
+  <text x="170" y="222" fill="#888899" font-size="10" font-family="monospace">5%</text>
+  <text x="225" y="222" fill="#888899" font-size="10" font-family="monospace">7%</text>
+  <text x="275" y="222" fill="#888899" font-size="10" font-family="monospace">9%</text>
+  <!-- Par value reference line at y=105 -->
+  <line x1="50" y1="105" x2="295" y2="105" stroke="#2a2a35" stroke-width="0.5" stroke-dasharray="4,4"/>
+  <text x="297" y="109" fill="#555566" font-size="9" font-family="monospace">Par</text>
+  <!-- Inverse curve — convex, falling left to right -->
+  <!-- Short duration (2yr) — flatter curve -->
+  <path d="M 58,32  C 80,40 120,80 160,105 S 220,140 285,163"
+    fill="none" stroke="#c9a84c" stroke-width="2" stroke-linecap="round"/>
+  <!-- Long duration (20yr) — steeper curve -->
+  <path d="M 58,18  C 80,28 110,60 160,105 S 230,170 285,200"
+    fill="none" stroke="#f75f5f" stroke-width="2" stroke-linecap="round"/>
+  <!-- Par point marker -->
+  <circle cx="160" cy="105" r="5" fill="#3ecf8e"/>
+  <text x="164" y="101" fill="#3ecf8e" font-size="10" font-family="monospace">Par ($1,000)</text>
+  <!-- Legend -->
+  <line x1="55" y1="245" x2="80" y2="245" stroke="#c9a84c" stroke-width="2"/>
+  <text x="84" y="249" fill="#888899" font-size="10" font-family="monospace">Short duration (2yr)</text>
+  <line x1="55" y1="260" x2="80" y2="260" stroke="#f75f5f" stroke-width="2"/>
+  <text x="84" y="264" fill="#888899" font-size="10" font-family="monospace">Long duration (20yr)</text>
+
+  <!-- DIVIDER -->
+  <line x1="310" y1="10" x2="310" y2="235" stroke="#2a2a35" stroke-width="1"/>
+
+  <!-- RIGHT PANEL: Duration sensitivity table -->
+  <text x="460" y="28" text-anchor="middle" fill="#e8e8f0" font-size="13" font-family="monospace" font-weight="bold">Duration &amp; Rate Sensitivity</text>
+  <!-- Header row -->
+  <rect x="316" y="36" width="298" height="24" rx="3" fill="#2a2a35"/>
+  <text x="390" y="52" text-anchor="middle" fill="#888899" font-size="11" font-family="monospace">Bond type</text>
+  <text x="500" y="52" text-anchor="middle" fill="#888899" font-size="11" font-family="monospace">Duration</text>
+  <text x="590" y="52" text-anchor="middle" fill="#888899" font-size="11" font-family="monospace">+1% rate →</text>
+  <!-- Rows -->
+  <rect x="316" y="62" width="298" height="22" rx="0" fill="#1c1c24"/>
+  <text x="390" y="77" text-anchor="middle" fill="#e8e8f0" font-size="11" font-family="monospace">T-Bill (3mo)</text>
+  <text x="500" y="77" text-anchor="middle" fill="#c9a84c" font-size="11" font-family="monospace">0.25 yr</text>
+  <text x="590" y="77" text-anchor="middle" fill="#3ecf8e" font-size="11" font-family="monospace">−0.25%</text>
+
+  <rect x="316" y="86" width="298" height="22" rx="0" fill="#16161c"/>
+  <text x="390" y="101" text-anchor="middle" fill="#e8e8f0" font-size="11" font-family="monospace">2-Year Note</text>
+  <text x="500" y="101" text-anchor="middle" fill="#c9a84c" font-size="11" font-family="monospace">1.9 yr</text>
+  <text x="590" y="101" text-anchor="middle" fill="#3ecf8e" font-size="11" font-family="monospace">−1.9%</text>
+
+  <rect x="316" y="110" width="298" height="22" rx="0" fill="#1c1c24"/>
+  <text x="390" y="125" text-anchor="middle" fill="#e8e8f0" font-size="11" font-family="monospace">5-Year Note</text>
+  <text x="500" y="125" text-anchor="middle" fill="#c9a84c" font-size="11" font-family="monospace">4.5 yr</text>
+  <text x="590" y="125" text-anchor="middle" fill="#c9a84c" font-size="11" font-family="monospace">−4.5%</text>
+
+  <rect x="316" y="134" width="298" height="22" rx="0" fill="#16161c"/>
+  <text x="390" y="149" text-anchor="middle" fill="#e8e8f0" font-size="11" font-family="monospace">10-Year Note</text>
+  <text x="500" y="149" text-anchor="middle" fill="#e8a020" font-size="11" font-family="monospace">8.5 yr</text>
+  <text x="590" y="149" text-anchor="middle" fill="#e8a020" font-size="11" font-family="monospace">−8.5%</text>
+
+  <rect x="316" y="158" width="298" height="22" rx="0" fill="#1c1c24"/>
+  <text x="390" y="173" text-anchor="middle" fill="#e8e8f0" font-size="11" font-family="monospace">20-Year Bond</text>
+  <text x="500" y="173" text-anchor="middle" fill="#f77a40" font-size="11" font-family="monospace">13.5 yr</text>
+  <text x="590" y="173" text-anchor="middle" fill="#f77a40" font-size="11" font-family="monospace">−13.5%</text>
+
+  <rect x="316" y="182" width="298" height="22" rx="0" fill="#16161c"/>
+  <text x="390" y="197" text-anchor="middle" fill="#e8e8f0" font-size="11" font-family="monospace">30-Year Bond</text>
+  <text x="500" y="197" text-anchor="middle" fill="#f75f5f" font-size="11" font-family="monospace">18.0 yr</text>
+  <text x="590" y="197" text-anchor="middle" fill="#f75f5f" font-size="11" font-family="monospace">−18.0%</text>
+
+  <!-- Note -->
+  <text x="460" y="220" text-anchor="middle" fill="#555566" font-size="10" font-family="monospace">Price change ≈ −Duration × Δrate</text>
+  <text x="334" y="250" text-anchor="middle" fill="#555566" font-size="10" font-family="monospace">Left: par = $1,000 at coupon rate. Long-duration bonds amplify both gains and losses.</text>
+</svg>
+</figure>
+
         <p>This is the concept that trips up most investors. Here's the mechanical explanation:</p>
         <p>Suppose you bought a 10-year Treasury bond yesterday at $1,000, paying a 4.5% coupon ($45/year). Today, the Federal Reserve raises rates and new 10-year Treasuries are issued at 5.5%. Your old bond still pays $45/year — but new bonds pay $55/year on the same $1,000 investment.</p>
         <p>Why would anyone pay $1,000 for your bond when they can get a new one paying $110 more over 10 years? They wouldn't — unless your bond's price dropped to the level where its $45/year payment plus return of face value equals the same total return as the new 5.5% bond. Your bond's price falls to approximately $920.</p>
