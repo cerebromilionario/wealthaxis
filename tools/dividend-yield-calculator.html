@@ -42,7 +42,42 @@
     <div class="tool-faq"><h2>Dividend Yield Calculator: FAQ</h2><div class="faq-item"><h3>What is a good dividend yield?</h3><p>For US equities, 2% to 4% is often considered healthy and sustainable. Very high yields can indicate risk.</p></div><div class="faq-item"><h3>Why yield on cost matters?</h3><p>Yield on cost shows your income return relative to your buy price, useful for long-term dividend growth investors.</p></div></div>
   </div></div>
   <div class="ad-slot ad-slot--horizontal"><span class="ad-label">Advertisement</span></div>
-  <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 WealthAxis. For informational purposes only. Not financial advice.</p></div></div></footer>
+      <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">Wealth<span>Axis</span></a>
+          <p>Smart finance and investment insights for modern investors. Built for clarity. Built for results.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Content</h4>
+          <a href="/blog/index.html">Blog</a>
+          <a href="/blog/index.html?cat=stocks">Stocks</a>
+          <a href="/blog/index.html?cat=etf">ETFs</a>
+          <a href="/blog/index.html?cat=retirement">Retirement</a>
+        </div>
+        <div class="footer-links">
+          <h4>Tools</h4>
+          <a href="/tools/index.html#compound">Compound Interest</a>
+          <a href="/tools/index.html#roi">ROI Calculator</a>
+          <a href="/tools/index.html#fire">FIRE Number</a>
+          <a href="/tools/index.html#dca">DCA Simulator</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms-of-use.html">Terms of Use</a>
+          <a href="/about-us.html">About Us</a>
+          <a href="/about-us-en.html">About Us (EN)</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WealthAxis. For informational purposes only. Not financial advice.</p>
+      </div>
+    </div>
+  </footer>
   <script src="../js/main.js"></script>
   <script>function fmt(n){return '$'+Math.round(n).toLocaleString('en-US')};function pct(n){return (n>=0?'+':'')+n.toFixed(2)+'%'};function calcTool(){const p=+a.value||0,dv=+b.value||0,sh=+c.value||0,cost=+d.value||1,g=(+e.value||0)/100,y=+f.value||0;const yld=p?dv/p*100:0;const inc=dv*sh;const yoc=cost?dv/cost*100:0;const val=p*sh;const futureDiv=dv*Math.pow(1+g,y)*sh;r1.textContent=pct(yld);r2.textContent=fmt(inc);r3.textContent=pct(yoc);r4.textContent=fmt(val);r5.textContent=fmt(futureDiv);r6.textContent='After '+y+' years';r7.textContent=fmt(inc/12);results.style.display='block';}calcTool();</script>
 </body>

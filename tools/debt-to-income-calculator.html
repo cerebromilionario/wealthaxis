@@ -22,4 +22,41 @@
 <div style="margin-top:22px"><h2 style="font-family:var(--font-display);font-size:1.3rem">Related Calculators</h2><div class="related-tools"><a class="rel-tool" href="compound-interest-calculator.html"><strong>📈 Compound Interest</strong><span>Growth projections</span></a><a class="rel-tool" href="roi-calculator.html"><strong>💰 ROI Calculator</strong><span>Return analysis</span></a><a class="rel-tool" href="portfolio-rebalancing-calculator.html"><strong>🔁 Rebalancing</strong><span>Portfolio maintenance</span></a></div></div>
 </div></div><script src="../js/main.js"></script><script>function money(v){return '$'+Math.round(v).toLocaleString('en-US')}function pct(v){return (v>=0?'+':'')+v.toFixed(2)+'%'}function calcTool(){const income=parseFloat(document.getElementById('income').value)||0;
 const house=parseFloat(document.getElementById('house').value)||0;
-const other=parseFloat(document.getElementById('other').value)||0;let main=0,second=0,third=0;main=(house/income)*100;second=((house+other)/income)*100;third=43-second;document.getElementById('res-main').textContent=Math.abs(main)>100?money(main):pct(main);document.getElementById('res-second').textContent=Math.abs(second)>100?money(second):pct(second);document.getElementById('res-third').textContent=Math.abs(third)>100?money(third):pct(third);document.getElementById('results').style.display='grid';}calcTool();</script></body></html>
+const other=parseFloat(document.getElementById('other').value)||0;let main=0,second=0,third=0;main=(house/income)*100;second=((house+other)/income)*100;third=43-second;document.getElementById('res-main').textContent=Math.abs(main)>100?money(main):pct(main);document.getElementById('res-second').textContent=Math.abs(second)>100?money(second):pct(second);document.getElementById('res-third').textContent=Math.abs(third)>100?money(third):pct(third);document.getElementById('results').style.display='grid';}calcTool();</script>    <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">Wealth<span>Axis</span></a>
+          <p>Smart finance and investment insights for modern investors. Built for clarity. Built for results.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Content</h4>
+          <a href="/blog/index.html">Blog</a>
+          <a href="/blog/index.html?cat=stocks">Stocks</a>
+          <a href="/blog/index.html?cat=etf">ETFs</a>
+          <a href="/blog/index.html?cat=retirement">Retirement</a>
+        </div>
+        <div class="footer-links">
+          <h4>Tools</h4>
+          <a href="/tools/index.html#compound">Compound Interest</a>
+          <a href="/tools/index.html#roi">ROI Calculator</a>
+          <a href="/tools/index.html#fire">FIRE Number</a>
+          <a href="/tools/index.html#dca">DCA Simulator</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms-of-use.html">Terms of Use</a>
+          <a href="/about-us.html">About Us</a>
+          <a href="/about-us-en.html">About Us (EN)</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WealthAxis. For informational purposes only. Not financial advice.</p>
+      </div>
+    </div>
+  </footer>
+
+  </body></html>

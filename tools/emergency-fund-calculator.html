@@ -37,7 +37,42 @@
     <div class="tool-faq"><h2>Emergency Fund Calculator: FAQ</h2><div class="faq-item"><h3>How many months should I keep?</h3><p>Most households use 3-6 months. Variable income or high risk careers may prefer 9-12 months.</p></div></div>
   </div></div>
   <div class="ad-slot ad-slot--horizontal"><span class="ad-label">Advertisement</span></div>
-  <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 WealthAxis. For informational purposes only. Not financial advice.</p></div></div></footer>
+      <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">Wealth<span>Axis</span></a>
+          <p>Smart finance and investment insights for modern investors. Built for clarity. Built for results.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Content</h4>
+          <a href="/blog/index.html">Blog</a>
+          <a href="/blog/index.html?cat=stocks">Stocks</a>
+          <a href="/blog/index.html?cat=etf">ETFs</a>
+          <a href="/blog/index.html?cat=retirement">Retirement</a>
+        </div>
+        <div class="footer-links">
+          <h4>Tools</h4>
+          <a href="/tools/index.html#compound">Compound Interest</a>
+          <a href="/tools/index.html#roi">ROI Calculator</a>
+          <a href="/tools/index.html#fire">FIRE Number</a>
+          <a href="/tools/index.html#dca">DCA Simulator</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms-of-use.html">Terms of Use</a>
+          <a href="/about-us.html">About Us</a>
+          <a href="/about-us-en.html">About Us (EN)</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WealthAxis. For informational purposes only. Not financial advice.</p>
+      </div>
+    </div>
+  </footer>
   <script src="../js/main.js"></script>
   <script>function fmt(n){return '$'+Math.round(n).toLocaleString('en-US')};function pct(n){return (n>=0?'+':'')+n.toFixed(2)+'%'};function calcTool(){const exp=+a.value||0,m=+b.value||0,cur=+c.value||0,add=+d.value||0,rate=(+e.value||0)/100,extra=+f.value||0;const target=exp*m;let bal=cur+extra,months=0,interest=0;while(bal<target&&months<600){const i=bal*rate/12;interest+=i;bal+=i+add;months++;}const dt=new Date();dt.setMonth(dt.getMonth()+months);r1.textContent=fmt(target);r2.textContent=fmt(Math.max(target-(cur+extra),0));r3.textContent=months.toString();r4.textContent=fmt(interest);r5.textContent=dt.toLocaleDateString('en-US',{month:'short',year:'numeric'});r6.textContent=(exp?((cur+extra)/exp).toFixed(1):'0')+' months';results.style.display='block';}calcTool();</script>
 </body>

@@ -37,7 +37,42 @@
     <div class="tool-faq"><h2>Stock Average Down Calculator: FAQ</h2><div class="faq-item"><h3>Should I always average down?</h3><p>No. Average down only when thesis is intact, balance sheet is sound, and risk is controlled.</p></div></div>
   </div></div>
   <div class="ad-slot ad-slot--horizontal"><span class="ad-label">Advertisement</span></div>
-  <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 WealthAxis. For informational purposes only. Not financial advice.</p></div></div></footer>
+      <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">Wealth<span>Axis</span></a>
+          <p>Smart finance and investment insights for modern investors. Built for clarity. Built for results.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Content</h4>
+          <a href="/blog/index.html">Blog</a>
+          <a href="/blog/index.html?cat=stocks">Stocks</a>
+          <a href="/blog/index.html?cat=etf">ETFs</a>
+          <a href="/blog/index.html?cat=retirement">Retirement</a>
+        </div>
+        <div class="footer-links">
+          <h4>Tools</h4>
+          <a href="/tools/index.html#compound">Compound Interest</a>
+          <a href="/tools/index.html#roi">ROI Calculator</a>
+          <a href="/tools/index.html#fire">FIRE Number</a>
+          <a href="/tools/index.html#dca">DCA Simulator</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms-of-use.html">Terms of Use</a>
+          <a href="/about-us.html">About Us</a>
+          <a href="/about-us-en.html">About Us (EN)</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WealthAxis. For informational purposes only. Not financial advice.</p>
+      </div>
+    </div>
+  </footer>
   <script src="../js/main.js"></script>
   <script>function fmt(n){return '$'+Math.round(n).toLocaleString('en-US')};function pct(n){return (n>=0?'+':'')+n.toFixed(2)+'%'};function calcTool(){const s1=+a.value||0,p1=+b.value||0,s2=+c.value||0,p2=+d.value||0,target=+e.value||0,fee=+f.value||0;const totalShares=s1+s2;const invested=s1*p1+s2*p2+fee;const avg=totalShares?invested/totalShares:0;const profit=(target-avg)*totalShares;const gain=invested?profit/invested*100:0;r1.textContent=fmt(avg);r2.textContent=totalShares.toLocaleString('en-US');r3.textContent=fmt(invested);r4.textContent=fmt(avg);r5.textContent=fmt(profit);r6.textContent=pct(gain);results.style.display='block';}calcTool();</script>
 </body>

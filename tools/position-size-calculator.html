@@ -37,7 +37,42 @@
     <div class="tool-faq"><h2>Position Size Calculator: FAQ</h2><div class="faq-item"><h3>Why cap allocation?</h3><p>Even if stop-based sizing allows bigger size, concentration risk can still hurt your portfolio.</p></div></div>
   </div></div>
   <div class="ad-slot ad-slot--horizontal"><span class="ad-label">Advertisement</span></div>
-  <footer class="footer"><div class="container"><div class="footer-bottom"><p>© 2026 WealthAxis. For informational purposes only. Not financial advice.</p></div></div></footer>
+      <footer class="footer">
+    <div class="container">
+      <div class="footer-grid">
+        <div class="footer-brand">
+          <a href="/" class="logo">Wealth<span>Axis</span></a>
+          <p>Smart finance and investment insights for modern investors. Built for clarity. Built for results.</p>
+        </div>
+        <div class="footer-links">
+          <h4>Content</h4>
+          <a href="/blog/index.html">Blog</a>
+          <a href="/blog/index.html?cat=stocks">Stocks</a>
+          <a href="/blog/index.html?cat=etf">ETFs</a>
+          <a href="/blog/index.html?cat=retirement">Retirement</a>
+        </div>
+        <div class="footer-links">
+          <h4>Tools</h4>
+          <a href="/tools/index.html#compound">Compound Interest</a>
+          <a href="/tools/index.html#roi">ROI Calculator</a>
+          <a href="/tools/index.html#fire">FIRE Number</a>
+          <a href="/tools/index.html#dca">DCA Simulator</a>
+        </div>
+        <div class="footer-links">
+          <h4>Legal</h4>
+          <a href="/disclaimer.html">Disclaimer</a>
+          <a href="/privacy-policy.html">Privacy Policy</a>
+          <a href="/terms-of-use.html">Terms of Use</a>
+          <a href="/about-us.html">About Us</a>
+          <a href="/about-us-en.html">About Us (EN)</a>
+          <a href="/contact.html">Contact</a>
+        </div>
+      </div>
+      <div class="footer-bottom">
+        <p>&copy; 2026 WealthAxis. For informational purposes only. Not financial advice.</p>
+      </div>
+    </div>
+  </footer>
   <script src="../js/main.js"></script>
   <script>function fmt(n){return '$'+Math.round(n).toLocaleString('en-US')};function pct(n){return (n>=0?'+':'')+n.toFixed(2)+'%'};function calcTool(){const eq=+a.value||0,riskPct=(+b.value||0)/100,entry=+c.value||0,stop=+d.value||0,maxAlloc=(+e.value||100)/100,costs=+f.value||0;const riskDollar=eq*riskPct;const riskPerShare=Math.max(entry-stop,0.01);let shares=Math.floor((riskDollar-costs)/riskPerShare);shares=Math.max(shares,0);const maxShares=Math.floor((eq*maxAlloc)/entry);if(shares>maxShares)shares=maxShares;const posVal=shares*entry;const rr=(entry-stop)>0?((entry+(entry-stop)*2)-entry)/(entry-stop):0;r1.textContent=fmt(riskDollar);r2.textContent=shares.toLocaleString('en-US');r3.textContent=fmt(posVal);r4.textContent=fmt(riskPerShare);r5.textContent=((posVal/eq)*100).toFixed(1)+'%';r6.textContent=rr.toFixed(1)+'R';results.style.display='block';}calcTool();</script>
 </body>
